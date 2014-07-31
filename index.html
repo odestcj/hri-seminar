@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Brown CSCI1950-E - Human-Robot Interaction Seminar</title>
+    <title>Brown University CS1950-E - Human-Robot Interaction Seminar</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 
     <!-- Combo with CSSNormalize, CSSGrids-Responsive, CSSForm, CSSTable, CSSList (v3.9.1) -->
@@ -36,11 +36,10 @@
 <body class='yui3-skin-sam'>
 
     <div id="headerMenu" class="yui3-menu yui3-menu-open yui3-menu-horizontal yui3-menu-fixed">
-        <span class="yui3-menu-heading">BrownCS148</span>
+        <span class="yui3-menu-heading">BrownCS1950-E</span>
         <ul>
             <li class="yui3-menu-active"><a href="#schedule">schedule</a></li>
-            <li><a href="http://github.com/BrownCS148/">github</a></li>
-            <li><a href="https://github.com/odestcj/3jsbot_stencil">3jsbot_stencil</a></li>
+            <li><a href="http://github.com/BrownCS1950E/">github</a></li>
             <li><a href="#assignment1">asgn1</a></li>
             <li><a href="#assignment2">asgn2</a></li>
             <li><a href="#assignment3">asgn3</a></li>
@@ -58,16 +57,36 @@
      </div>
     <div class="content">
 <p>
-<img src="header1.jpg" align="center">
+<center><img src="header1.jpg"></center>
 
         <h2>Introduction</h2>
 
 <p>
 
-CS 148 is an introduction to core topics in the modeling and control of autonomous robots.  This course focuses on the development of “brains for robots”. That is, given a robot as a machine with sensing, actuation, and computation, how do we develop programs that allow the robot to function autonomously? Such programs involve the robot's perception of its world, decision making towards some objective, and transforming decided actions into motor commands.  These are functions commonly used in modern robotics, such as for the PR2 (below).
+CS1950-E is a seminar course on Human-Robot Interaction. The theme of this course this fall is going to be "Creating usability interactive maps from Robot sensing". We will introduce you to the perceptual problems and challenges involved in robotics. In the process you will be going through some basics in robot sensing (from Odometry, Lasers, RGBD Sensors and Camera), mapping and state estimation problems like localization and SLAM. We will essentially discuss conference papers covering 4 topics such as 1) Smoothing RGBD data from Kinect, 2) RGBD Mapping, 3) History of SLAM in robotics (EKF, SGD, FastSLAM) and 4) Optimization techniques used in mapping and SLAM (iSAM, ICP). This course focuses on SLAM part of robotics and how human interaction on these maps would help in building better maps. 
+Below are some of the recent research developments on these topics for your motivation.
+<center>
+<p>Smoothing RGBD data from Kinect</br>
+ <embed width="420" height="345"
+src="http://youtu.be/FqHroDuo_I8" type="application/x-shockwave-flash">
+
+
+<p>RGBD Mapping</br>
+ <embed width="420" height="345"
+src="http://youtu.be/58_xG8AkcaE" type="application/x-shockwave-flash">
+
+<p>SLAM</br>
+ <embed width="420" height="345"
+src="http://youtu.be/3BNOsxMZD14" type="application/x-shockwave-flash">
+
+<p>iSAM</br>
+ <embed width="420" height="345"
+src="http://youtu.be/cNF5vksmY6s" type="application/x-shockwave-flash">
+</center>
+
 <!--We answer this question through a series of lectures, class discussions, and group projects. -->
 <p>
-This year, CS148 projects will model and control robots through projects written in JavaScript/HTML5.  These projects will be supported by the 3jsbot code stencil, which uses <a href="http://threejs.org/">threejs</a> for in-browser 3D rendering.  We will roughly follow software models from the Robot Operating System (ROS) robot middleware framework, such as the URDF kinematic modeling format.  Projects will cover 3D geometric transforms, compositions of matrix transforms, forward kinematics, axis-angle rotation by quaternions, proportional-derivative control, inverse kinematics, simple collision detection, and RRT motion planning, along with coverage of potential field navigation, Monte Carlo localization, and Newton-Euler dynamics.  
+This year, CS1950-E course work will involve each individual discussing atleast one paper during the entire semester (ofcourse Faculty/TA will help you understand the technical details) and assignments will be to implement some standard techniques in each of the above mentioned topics. There will be a final project of implementing something substantial out of your assignments. 
 <!--These projects will explore various approaches to robot decision making (spanning reaction to deliberation), perception (basic object recognition and state estimation), and control (proportional-derivative servos). -->
 
 <p>
@@ -100,56 +119,35 @@ TBA
 <h2>Prerequisites</h2> 
 
 <p>
-Any one of the following: CS15, CS17, CS19, or permission from the instructor
-
-<p>
-    CS 15, 17, or 19 should provide an adequate programming background for the projects in this course. In addition, motivated students who have taken CS 4 should consult with the instructor before enrolling in CS148. Interested students who have not taken any of these courses at Brown, but have some other strong programming experience should consult with course instructor.
-
-<p>
-
 Highly Recommended: Linear alegebra
 <br>
-Recommended: computer graphics, computer vision, AI
+Recommended: Computer graphics, Computer vision, AI
 
-I will do my best to cover the necessary material, but no guarantees.  Linear algebra will be used extensively for representing 3D geometric transforms.  Computer graphics is helpful for under-the-hood understanding of threejs.  Computer vision and AI share common concepts with this course.
+I will do my best to cover the necessary material, but no guarantees. Computer vision and AI share common concepts with this course.
 
 <h2>Textbook</h2>
 <p>
-<a href="http://bcs.wiley.com/he-bcs/Books?action=index&itemId=0471649902&bcsId=2888"><b>Robot Modeling and Control</b></a>
+<a href="http://www.probabilistic-robotics.org/"><b>Probabilistic Robotics</b></a>
 <br>
-Mark W. Spong, Seth Hutchinson and M. Vidyasagar
-<br>
-Wiley, 2005 
-<br>
-<a href="http://www.amazon.com/Robot-Modeling-Control-Mark-Spong/dp/0471649902">Available at Amazon</a>
+Wolfram Burgard, Dieter Fox, and Sebastian Thrun
 
-<p>
 <h3>Optional texts</h3>
-<p>
+<p><b>TBD</b>
 
-<a href="http://shop.oreilly.com/product/9780596517748.do"><b>JavaScript: The Good Parts</b></a>
-<br>
-Douglas Crockford
-<br>
-O'Reilly Media / Yahoo Press, 2008
-
-<p>
-<a href="http://mitpress.mit.edu/books/principles-robot-motion"><b>Principles of Robot Motion</b></a>
-<br>
-Howie Choset, Kevin M. Lynch, Seth Hutchinson, George A. Kantor, Wolfram Burgard, Lydia E. Kavraki and Sebastian Thrun
-<br>
-MIT Press, 2005
+<h2>List of papers covered in the course</h2>
+<a href="https://docs.google.com/a/brown.edu/document/d/15v_1w372qsQqEhSZ6cAZHdzMYF96PNODuVKRF6csvFc/edit?usp=sharing">click here to and assign yourself</a>
+</br>
 
 <h2>Projects and Grading</h2>
 
 <p>
-There will be 7 projects in CS148: 6 programming assignments and 1 oral/written assignment.  CS 148 projects are graded as “checked” (completed) or “not checked” (incomplete). To receive an A grade in the course, you must have all assignments checked by the end of reading period. For a B grade, 5 assignments must be checked. Less than 5 checks will result in no credit for the course.  The timing and due dates for these projects will be announced on an ongoing basis.
+There will be 4 programming assignments and 1 main project.  CS 1950E projects are graded as “checked” (completed) or “not checked” (incomplete). To receive an A grade in the course, you must have all assignments checked by the end of reading period. For a B grade, 3 assignments must be checked. Less than 3 checks will result in no credit for the course.  The timing and due dates for these projects will be announced on an ongoing basis.
 
-Git repositories will be used for project implementation, version control, and submission. Project implementations are submitted as branches in your assigned repository. These branches must be submitted prior to the due date for each assignment. Your implementation will be checked out and executed by the course staff. You will be notified by the course staff whether your implementation is sufficient for checking off the assignment. If your assignment is insufficient for receiving a check, your group is allowed one regrade (per assignment) with 2 weeks of notification. If deemed necessary, the course staff may require an interactive demonstration of your implementation and/or a web-based written report.
+<!--Git repositories will be used for project implementation, version control, and submission. Project implementations are submitted as branches in your assigned repository. These branches must be submitted prior to the due date for each assignment. Your implementation will be checked out and executed by the course staff. You will be notified by the course staff whether your implementation is sufficient for checking off the assignment. If your assignment is insufficient for receiving a check, your group is allowed one regrade (per assignment) with 2 weeks of notification. If deemed necessary, the course staff may require an interactive demonstration of your implementation and/or a web-based written report. -->
 
 <h3>Final Grading</h3>
 
-All grading will be finalized on May 10, 2014.  Regrading of specific assignments will be done upon request during office hours.  No regrading will be done after grades are finalized.
+All grading will be finalized on <b>TBA</b>.  Regrading of specific assignments will be done upon request during office hours.  No regrading will be done after grades are finalized.
 
 <h3>Repositories</h3>
 
@@ -162,11 +160,12 @@ Do not be late submitting assignments. The course staff reserves the right to no
 
 <h3>200-Level Credit</h3>
 <p>
-CS148 can be taken for 200-level (graduate) credit.  For 200-level credit, a grad of A must be earned.
+CS1950E can be taken for 200-level (graduate) credit.  For 200-level credit, a grad of A must be earned. <b>TBD</b>
 
 <h2>Collaboration Policy</h2>
 <p>
- This policy covers all course material and assignments unless otherwise stated. Course material and Turtlebot/ROS information and documentation may be discussed with anyone. Course material does not include assignment handouts. Assignments may be discussed with the other cs148 students. Discussions may make use of a whiteboard or paper. Discussions outside of your group cannot include writing or debugging code on a computer. You may take notes away from these discussions, provided these notes do not include any source code.
+<b>TBD</b>
+ This policy covers all course material and assignments unless otherwise stated. Course material and Turtlebot/ROS information and documentation may be discussed with anyone. Course material does not include assignment handouts. Assignments may be discussed with the other cs1950E students. Discussions may make use of a whiteboard or paper. Discussions outside of your group cannot include writing or debugging code on a computer. You may take notes away from these discussions, provided these notes do not include any source code.
 
 The code for your implementation may not be shown to anyone outside of your group, including granting access to repositories or careless lack of protection. You do not need to hide the screen from anyone, but you should not attempt to show anyone your code. When you are done using any robot device such that another group may use it, you must remove all code you have put onto the device. You may not share your code with others outside of your group. At any time, you may show others the implemented program running on a device or simulator, but you may not discuss specific debugging details about your code while doing so.
 
@@ -176,65 +175,63 @@ Should you fail to abide by this policy, you will receive no credit for this cou
 <h2 id="schedule">Tentative Schedule</h2>
 <p>
 <ul>
-<li>Week 1: Introduction, Motors and Sensors, Basic JavaScript (Chapter 1)</li>
-<a href="https://www.dropbox.com/s/s4ur6sh63iyod5b/cs148_robotics_overview.pdf">Slides</a>
-<li>Assignment 1 out: Getting familiar with 3jsbot</li>
+<li>Week 1: Introduction, Robot Sensors, Odometry, RGBD data</li>
+<!--<a href="https://www.dropbox.com/s/s4ur6sh63iyod5b/cs1950E_robotics_overview.pdf">Slides</a> -->
+<li>Assignment 1 out: MLS</li>
 
 <p>
-<li>Week 2: Robot Kinematics, URDF, Linear Alegbra Refresher, 2D Transforms, 3D Transforms (Chapter 2)</li>
-<a href="https://www.dropbox.com/s/lmcoogjwzsn2ci2/cs148_2014_robotics_2_transforms.pdf">Slides</a>
-<li>Assignment 1 due: Getting familiar with 3jsbot</li>
-<li>Assignment 2 out: Draw robot </li>
+<li>Week 2: Noise reduction, MLS (Moving least squares) down sampling</li>
+<!-- <a href="https://www.dropbox.com/s/lmcoogjwzsn2ci2/cs1950E_2014_robotics_2_transforms.pdf">Slides</a> -->
 
 <p>
-<li>Week 3: Forward Kinematics, Matrix Stack (Chapter 3), Quaternions; Not covered: D-H notation</li>
-<a href="https://www.dropbox.com/s/sbe4b5000w6uoma/cs148_2014_robotics_3_fk_quaternions.pdf">Slides</a>
+<li>Week 3: Mapping, RGBD Mapping</li>
+<!-- <a href="https://www.dropbox.com/s/sbe4b5000w6uoma/cs1950E_2014_robotics_3_fk_quaternions.pdf">Slides</a> -->
+<li>Assignment 1 due: MLS</li>
+<li>Assignment 2 out: RGBD Mapping using odometry</li>
 
 <p>
-<li>Week 4: Basic Dynamics and Control for Pendulum example, Numerical Integrators, Proportional-Integral-Derivative control</li>
-<a href="https://www.dropbox.com/s/e6ayvr8ntzys1ak/cs148_2014_robotics_4_dynamics_control.pdf">Slides</a>
-<li>Assignment 2 due: Draw robot</li>
-<li>Assignment 3 out: Pendulum Dynamics and Control</li>
-<li>Assignment 4 out: Control robot joints</li>
+<li>Week 4: Mapping, RGBD Mapping</li>
+<!-- <a href="https://www.dropbox.com/s/e6ayvr8ntzys1ak/cs1950E_2014_robotics_4_dynamics_control.pdf">Slides</a> -->
 
 <p>
-<li>Week 5: Inverse Kinematics, Geometric Jacobian, Pseudo Inverse (Chapter 4)</li>
-<a href="https://www.dropbox.com/s/3vl5dp8lz0xsol2/cs148_2014_robotics_5_ik.pdf">Slides</a>
-<li>Assignment 3 due: Pendulum Dynamics and Control</li>
+<li>Week 5: SLAM1</li>
+<!-- <a href="https://www.dropbox.com/s/3vl5dp8lz0xsol2/cs1950E_2014_robotics_5_ik.pdf">Slides</a> -->
+<li>Assignment 2 due: RGBD Mapping using odometry</li>
+<li>Assignment 3 out: SLAM - SGD</li>
 
 <p>
-<li>Week 6: Motion Planning, Probabilistic Roadmaps, RRT Connect (Chapter 5)</li>
-<a href="https://www.dropbox.com/s/bmx8dazfdggtstp/cs148_2014_robotics_6_motionplanning.pdf">Slides</a>
-<li>Handout: <a href="https://personalrobotics.ri.cmu.edu/courses/papers/Kuffner00-rrtconnect.pdf">RRT-Connect: An Efficient Approach to Single-Query Path Planning</a> by Kuffner and LaValle, ICRA 2000. </li>
-<li>Assignment 4 due: Control robot joints </li>
-<li>Assignment 5 out: Reach-to-point </li>
+<li>Week 6: SLAM2</li>
+<!-- <a href="https://www.dropbox.com/s/bmx8dazfdggtstp/cs1950E_2014_robotics_6_motionplanning.pdf">Slides</a>
+<li>Handout: <a href="https://personalrobotics.ri.cmu.edu/courses/papers/Kuffner00-rrtconnect.pdf">RRT-Connect: An Efficient Approach to Single-Query Path Planning</a> by Kuffner and LaValle, ICRA 2000. </li> -->
 
 <p>
-<li>Week 7: Simple collision detection (TBD), Potential Fields (Chapter 5)</li>
-<a href="https://www.dropbox.com/s/bmx8dazfdggtstp/cs148_2014_robotics_6_motionplanning.pdf">Slides</a> (continued from week 6)
+<li>Week 7: SLAM3</li>
+<li>Assignment 3 due: SLAM - SGD</li>
+<!-- <a href="https://www.dropbox.com/s/bmx8dazfdggtstp/cs1950E_2014_robotics_6_motionplanning.pdf">Slides</a> (continued from week 6) -->
 
 <p>
-<li>Week 8: Monte Carlo Localization</li>
-<li>Assignment 5 due: Reach-to-point </li>
-<li>Assignment 6 out: Collision-free Move-to-pose</li>
+<li>Week 8: Graph optimization techniques -I </li>
+<li>Assignment 4 out: Optimization assignment - ICP</li>
 
 <p>
-<li>Week 9: Range Sensing, 2.5D Point Clouds, Moving Least Squares </li>
+<li>Week 9: Graph optimization techniques -II </li>    
+
 
 <p>
-<li>Week 10: Newton-Euler Dynamics</li>
-<li>Assignment 6 out: Collision-free Move-to-pose</li>
-<li>Assignment 7 out: The best use of robotics? </li>
+<li>Week 10: Graph optimization techniques -III and Main project</li>    
+<li>Assignment 4 due: Optimization assignment - ICP</li>
+<li>Project out: Interactive UI to perform semantic annotation on RGBD Maps</li>
 
 <p>
-<li>Week 11: Class presentations, Robot Lab Demos, Quad Rotor Helicopters</li>
-<li>Assignment 7 due: The best use of robotics? </li>
+<li>Week 11: Discussions on Main Project</li>
+
 
 <p>
-<li>Week 12: TBD</li>
+<li>Week 12: Discussions on Main Project</li>
 </ul>
 
 <p>
+<b>TBD</b>
 Slides from this course borrow from and are indebted to many sources from around the web.  These source include a number of excellent robotics courses:
 
 <ul>
@@ -242,487 +239,7 @@ Slides from this course borrow from and are indebted to many sources from around
 <li><a href="https://cirl.lcsr.jhu.edu/SensorBasedRobotics/">JHU 600.336 - Algorithms for Sensor-Based Robotics</a></li>
 </ul>
 
-<h2 id="assignment1">Assignment 1: Getting familiar with 3jsbot</h2>  
-<p>
-<b>Due 9am, Monday, February 3, 2014</b>
-<p>
-In this assignment, you should clone the 3jsbot_stencil repository as your working repository for the course.  3jsbot_stencil contains a code stencil for the assignment and projects in the course.  If you open "home.html" in this repository, you should see the jittering disconnected pieces of a robot (described in "robots/br2.js"), similar to the follwing snapshot:
 
-<p>
-<img src="3jsbot_welcome.png">
-
-<p>
-Your task is to make these objects responsive to keyboard commands, specifically to move upward and stop/start jittering (although more is encouraged).  To do this, you will modify "home.html" within the sections delimited by "// CS148: INITIAL GETTING FAMILIAR CODE".  These sections also include code examples meant to be a quick (and very rough) introduction to JavaScript, assuming programming competency in another language. 
-
-Please be sure that the course instructor knows what repository you are using, and your branch is created and not modified past the deadline.
-<p>
-In the next assignment, we will put these pieces together to form the robot described in "robots/br2.js".
-
-<h3>Update</h3>
-<p>
-Please email Suzanne Alden (firstname_lastname@brown.edu) with your name, email address, and pointer to your repository.
-<p>
-Also, please ensure the instructor has read/commit access to your repository.  Such issues can be addressed through email or office hours.
-<p>
-For turning in your assignment, create a branch in your repository labeled "Assignment-1".  The "Assignment-1" branch is essentially a tag and should not be merged back into the master.  You should work from the master.
-<p>
-
-<p>
-<img src="3jsbot_welcome.png">
-
-<p>
-Your task is to make these objects responsive to keyboard commands, specifically to move upward and stop/start jittering (although more is encouraged).  To do this, you will modify "home.html" within the sections delimited by "// CS148: INITIAL GETTING FAMILIAR CODE".  These sections also include code examples meant to be a quick (and very rough) introduction to JavaScript, assuming programming competency in another language. 
-
-Please be sure that the course instructor knows what repository you are using, and your branch is created and not modified past the deadline.
-<p>
-In the next assignment, we will put these pieces together to form the robot described in "robots/br2.js".
-
-
-<p>
-
-<h2 id="assignment2">Assignment 2: Draw Robot</h2>  
-<p>
-<b>Due 9am, Wednesday, February 19, 2014</b>
-<p>
-In this assignment, you will render the forward kinematics of a robot, given its kinematic specification (in the "robots" subdirectory).  To render the robot properly, you will compute matrix transforms for each link and joint of the robot based their hierarchical configuration.  We will assume the joints will remain in their zero position, saving joint motion for Assignment 3.  
-
-Each file in the robots subdirectory contains code to create a robot data object and initializes this object with the kinematic description of a robot (as well as some meta information and rendering geometries).  This kinematic description defines a hierarchical configuration of the robot's links and joints.  This description is a subset of the <a href="http://wiki.ros.org/urdf">Unified Robot Description Format (URDF)</a>, as described in <a href="http://wiki.ros.org/urdf/Tutorials/Create%20your%20own%20urdf%20file">this tutorial</a>.  From this initialization, you should extend the robot object to:
-
-<p>
-<ul>
-<li> complete the kinematic hierarchy to specify the parent and children of each link, by modifying the init_robot_joints() function in home.html.</li>
-<li> include "3jsbot_forward_kinematics.js" and "3jsbot_matrix.js" in home.html </li>
-<li> invoke traversal of forward kinematics, by uncommenting robot_forward_kinematics() in my_animate() in home.html </li>
-<li> implement matrix support routines in 3jsbot_matrix.js </li>
-<li> implement recursive traversal of joints and links 3jsbot_forward_kinematics.js, starting from robot_forward_kinematics(), to compute transformation matrices for: </li>
-<ul>
-<li> robot.origin.xform: global position and orientation of robot </li>
-<li> robot.links[xx].xform: transform of link in global coordinates </li>
-<li> robot.joints[xx].origin.xform: transform of joint origin in global coordinates </li>
-<li> robot.joints[xx].xform: transform resulting from joint rotation in global coordinates.</li> 
-<ul>
-<li>For this assignment, robot.joints[x].xform equals robot.joints[x].origin.xform times the identity matrix (i.e., no rotation of the joint)</li>
-</ul>
-</ul>
-<li> for each link and joint, set its transformation for rendering by coverting the transform to the threejs format and applying it to the associated threejs geometry (.geom), such as:
-<pre><code data-language="javascript">
-    var tempmat = matrix_2Darray_to_threejs(robot.joints[xx].xform);
-    simpleApplyMatrix(robot.joints[xx].geom,tempmat);
-</code></pre>
-</ul>
-
-<p>
-
-If implemented properly, the robot_urdf_example.js example should produce the following rendering:
-
-<img src="asgn2_urdf_example.png">
-<p>
-
-The robot_br2_example.js should produce the following:
-<p>
-<img src="asgn2_br2_example.png">
-
-
-<p>
-For turning in your assignment, create a branch in your repository labeled "Assignment-2".  
-<p>
-
-<h3>Update</h3>
-<p>
-If the assignment is completed correctly, you should additionally be able to interactively highlight joints by uncommenting the following in 3jsbot.js:
-
-<pre><code data-language="javascript">
-/*
-    // initialize the active link/joint for control
-    active_link = robot.base;
-    active_joint = robot.links[active_link].children[0];
-    //robot.links[active_link].geom.material.wireframe = false;
-    //robot.links[active_link].geom.material.opacity = 0.5;
-    robot.joints[active_joint].display_geom.material.wireframe = false;
-    robot.joints[active_joint].display_geom.material.opacity = 0.5;
-*/
-</code></pre>
-
-<p>
-
-This will allow you to move up and down the kinematic hierarchy with the "k" and "j" keys, respectively.  You can also move between the children of a link using the "h" and "l" keys.
-
-<p>
-
-<h2 id="assignment3">Assignment 3: Pendulum Simulation and Control (a detour) </h2>  
-<p>
-<b>Due 9am, Wednesday, March 5, 2014</b>
-<p>
-
-To get a sense of physical dynamics and control, your task is to implement a physical simulator and servo controller for a frictionless <a href="http://en.wikipedia.org/wiki/Pendulum">simple pendulum</a> with a rigid massless rod, and then control this system as a 1 DOF robot with a single motor.  The <a href="https://github.com/odestcj/3jsbot_stencil/tree/master/pendulum">code stencil</a> for this pendulum example has been placed in the 3jsbot_stencil repository.
-<p>
-<a href="pendulum_threejs_2.png"><img src="pendulum_threejs_2_small.png"></a>
-
-<p>
-For physical simulation, you will implement two numerical integrators (<a href="http://en.wikipedia.org/wiki/Euler%27s_method">Euler's Method</a> and <a href="http://en.wikipedia.org/wiki/Verlet_integration#Velocity_Verlet">Velocity Verlet</a>) for a pendulum with parameters specified in the code stencil.  The numerical integrator will advance the state (angle and velocity) of the pendulum in time given the current acceleration (generated from the pendulum equation of motion).  If implemented successfully, this ideal pendulum should oscillate about the vertical (where the angle is zero) proportional to the pendulum's initial angle.
-
-<p>
-For motion control, you will implement a <a href="http://en.wikipedia.org/wiki/PID_controller">proportional-integral-derivative controller</a> to control the system's motor to a desired angle.  This PID controller should output control forces integrated into the system's dynamics.  You will need to tune the gains of the PID controller for stable and timely motion to the desired angle for pendulum with parameters: length=2.0, mass=2.0, gravity=9.81.  
-
-<p>
-For user input, you should be able to use the 'q' and 'e' keys to decrement and increment the desired angle of the 1 DOF servoed robot arm, and hold down the 's' key zero the robot's controls and allow it to swing uncontrolled.
-
-<p>
-For turning in your assignment, create a branch in your repository labeled "Assignment-3".  
-<p>
-
-<p>
-
-<h2 id="assignment4">Assignment 4: Control Robot </h2>  
-<p>
-<b>Due 9am, Friday, March 14, 2014</b>
-<p>
-
-For this assignment, you will now add motor rotation to your robot from Assignment 2 with PID control from Assignment 3.  You will implement angular rotation about each joint axis using quaternions for axis-angle rotation.  You should create an "angle" property for each joint that is initialized as zero.  The rotation due to joint angles should be accounted for in the robot's forward kinematics and implemented as quaternions in "3jsbot_quaterion.js".  Remember to uncomment the include of "3jsbot_quaterion.js" in "home.html" and the joint rendering cylinder rotation in "3jsbot.js".
-
-<a href="asgn4_joint_rotation.png"><img src="asgn4_joint_rotation_small.png"></a>
-
-<p>
-Once joint axis rotation is implemented, you will implement movement controls and PD control for the robot.  You should create an "control" property for each joint and global DOF that is initialized as zero, and a "servo" property with PD gains and desireds.  In "home.html", you should uncomment the function call to robot_apply_controls() and code segment around robot_pd_control(), and implement these functions respectively in "3jsbot_controls.js" and "3jsbot_pd_control.js".  robot_apply_controls() should add the controls to the joint angle state and global pose of the robot.  For the joint angles, robot_pd_control() should implement a simple proportional-derivative controller that updates to the desired angle based on the seconds of the system clock.  The following code snippet shows how to get the current system time and seconds, and scale this value to span the range (0..2*Math.PI).
-
-<p>
-<pre><code data-language="javascript">
-    var curdate = new Date();
-    curdate.getSeconds()/60*2*Math.PI;
-</code></pre>
-
-<p>
-For user input, you should be able to use the 'u' and 'i' keys to decrement and increment the rotation angle the selected joint, 'wasd' keys to move the robot on the ground plane, 'q' and 'e' keys for lateral base movement, and hold down the 'o' key to servo based on the system seconds. controls and allow it to swing uncontrolled.
-
-<p>
-For turning in your assignment, create a branch in your repository labeled "Assignment-4".  
-<p>
-
-<p>
-
-<h3>Update</h3>
-<p>
-<a href="https://www.dropbox.com/s/jlxhfvkh0ytybjz/cs148_2014_robotics_3a_assignment4_addendum.pdf">Addendum slides</a> with more details about user input and controls for base motion.
-
-<p>
-
-<h2 id="assignment5">Assignment 5: Reach-to-point </h2>  
-<p>
-<b>Due 9am, Friday, April 4, 2014</b>
-<p>
-
-<img src="3jsbot_snapshot_2.png" width=600>
-
-<p>
-For this assignment, you will now control your robot to reach to a given point through inverse kinematics for position control of the robot endeffector.  Inverse kinematics will be implemented through both the Jacobian Transpose and Jacobian Pseudoinverse methods, although only one will be invoked at run-time.  
-
-The core of this assignment is to complete the robot_inverse_kinematics() function invoked from home.html.  This function will be called with three arguements: the variable ik_target (used by 3jsbot_userinput.js) to specify the IK target location in the world frame, the name of the joint directly connected to the endeffector, and the location of the endeffector in the local joint frame.  The following is an example of invoking robot_inverse_kinematics():
-
-<pre><code data-language="javascript">
-    robot_inverse_kinematics(ik_target, "forearm_right_yaw", [[0],[0],[0.5],[1]]);
-</code></pre>
-
-<p>
-The top level of robot_inverse_kinematics is provided below, and is the beginning of your implementation in the file 3jsbot_inverse_kinematics.js:  
-
-
-<p>
-<pre><code data-language="javascript">
-function robot_inverse_kinematics(target_pos, endeffector_joint, endeffector_local_pos) {
-    // compute joint angle controls to move location on specified link to Cartesian location
-    if (update_ik) {
-        iterate_inverse_kinematics(target_pos, endeffector_joint, endeffector_local_pos);
-        endeffector_geom.visible = true;
-        target_geom.visible = true;
-    }
-    else {
-        endeffector_geom.visible = false;
-        target_geom.visible = false;
-    }
-    update_ik = false;
-
-}
-</code></pre>
-<p>
-
-This code stub contains clauses to handle rendering of the endeffector (endeffector_geom) and target (target_geom) geometries and when to perform IK iterations (which occurs while holding down the 'p' key through 3jsbot_userinput.js).  Both endeffector_geom and target_geom have been previously created by 3jsbot, so your code only needs to set the transform using simpleApplyMatrix() for proper rendering.  Further, the 'r'/'f' keys will move the target location up/down, respectively.
-
-<p>
-In implementing this IK routine, please remember the following:
-<p>
-<ul>
-<li>Computation of the Jacobian should only occur with respect to the joints along the chain from the endeffector joint to the robot base</li>
-<li>The location of the endeffector needs to be computed using transforms resulting from the robot's forward kinematics  </li>
-<li>Matrix inversion can be invoked by using the provided routine numeric.inv(mat), available through <a href="http://www.numericjs.com/">numericjs</a> </li>
-<li>The computed velocity in configuration should be applied to the robot through the joint.controls field of each joint </li>
-<li>This assignment is only for positional control of the robot endeffector with respect to computing IK error</li>
-</ul>
-
-
-<p>
-
-<h2 id="assignment6">Assignment 6: Collision-free Move-to-pose  </h2>  
-<p>
-<b>Due 9am, Friday, April 25, 2014</b>
-<p>
-
-<img src="asgn6_motionplan.png" width=800>
-<p>
-
-For this assignment, you will now implement a collision-free motion planner to enable your robot to navigate from a random configuration in the world to its home configuration (marked by the "X" on the world floor).  Motion planning will be implemented through the <a href="http://www.ted.com/talks/henry_evans_and_chad_jenkins_meet_the_robots_for_humanity">RRT-Connect algorithm</a> (described by Kuffner and LaValle).  The core of this assignment is to complete the robot_rrt_planner_init() and robot_rrt_planner_iterate() in the provided 3jsbot_rrt_connect.js stencil.  For successful execution, your implementation of RRT-Connect, the provided collision detection system, and a single specification of world geometry will need to be included in home.html:
-
-
-<pre><code data-language="javascript">
-<script src="3jsbot_rrt_connect.js"></script> 
-<script src="3jsbot_collision.js"></script> 
-<script src="worlds/world_basic.js"></script>
-<!--
-<script src="worlds/world_empty.js"></script>
-<script src="worlds/world_random.js"></script>
-<script src="worlds/world_local_minima.js"></script>
-<script src="worlds/world_s.js"></script>
--->
-</code></pre>
-
-<p>
-
-Note: your planner should be constrained such that the search does not consider configurations where the base is outside the X-Z plane.  Specifically, the base should not translate along the Y axis, and should not rotate about the X and Z axes.
-
-<h3>First step: add collision detection</h3> 
-<p>
-Your RRT-Connect implementation will depend on detection of collisions (provided by the function robot_collision_test() in 3jsbot_collision.js) with respect to a specified world geometry.  Worlds are specified as a rectangular boundary and sphere obstacles.  A collection of worlds are provided in the "worlds/" subdirectory of 3jsbot_stencil.  The collision detection system performs two forms of tests: 1) testing of the base position of the robot against the rectangular extents of the world, and 2) testing of the robot configuration against spherical objects.  Configuration collision testing is performed by AABB/Sphere tests that require the bounding box of each link's geometry in the coordinates of that link.  This bounding box is computed by adding the following within the loop inside init_robot_links_geoms() in 3jsbot.js:
-
-<pre><code data-language="javascript">
-        // bounding box of robot link in local link coordinates
-        robot.links[x].bbox = new THREE.Box3;
-        robot.links[x].bbox = robot.links[x].bbox.setFromPoints(robot.links[x].geom.geometry.vertices);
-</code></pre>
-
-<p>
-Even before your planner is implemented, you can use the collision system interactively with your robot.  The provided robot_iscollision() function will test the the current configuration of the robot.  If a collision occurs, the base of the robot will be displayed as a solid red.  The call to robot_iscollision() should be placed within my_animate() in home.html:
-
-<pre><code data-language="javascript">
-    // show if robot is currently in collision
-    robot_iscollision();
-</code></pre>
-
-<p>
-<img src="asgn6_collision.png" width=600>
-<p>
-
-If successful to this point, you should be able to see the collision world of the robot, move around this world, and see the base display solid red when a collision occurs.
-
-<h3>Invoking the planner</h3> 
-
-<p>
-Your planner will be invoked interactively by first moving the robot to an arbitrary non-colliding configuration in the world and then pressing the "m" key.  The "m" key will request the generation of a motion plan.  While the planner is working, it will not accept new planning requests.  Thus, you can move the robot around while the planner is executing.
-
-<p>
-Invokation of the planner is implemented by adding the following code segments to: 
-
-<p>
-<ul>
-<li> init_robot() in home.html:
-
-<p>
-<pre><code data-language="javascript">
-    // initialize flags for executing planner
-    generating_motion_plan = false;
-    generate_motion_plan = false;
-</code></pre>
-
-<p>
-<li> my_animate() in home.html:
-
-<p>
-<pre><code data-language="javascript">
-    // configuration space motion planning
-    if ((generate_motion_plan) && (!generating_motion_plan)) {
-        robot_rrt_planner_init();
-        generating_motion_plan = true;
-        generate_motion_plan = false;
-    }
-    if (generating_motion_plan) {
-        //robot_rrt_connect(q_desired);
-        rrt_result = robot_rrt_planner_iterate();
-        if (rrt_result === "reached") {
-            //alert("home: reached");
-            generating_motion_plan = false;
-        }
-    }
-</code></pre>
-
-<p>
-<li> user_input() in 3jsbot_userinput.js:
-
-<p>
-<pre><code data-language="javascript">
-    // generate motion plan
-    if ( keyboard.pressed("m") )
-        generate_motion_plan = true;
-    else
-        generate_motion_plan = false;
-</code></pre>
-</ul>
-
-<h3>Planner output</h3> 
-<p>
-The output of your planner will be a sequentially ordered array (named robot_path[]) of RRT vertices, where each RRT vertex contains a robot configuration (.vertex), an array of edges (.edges), and a threejs indicator geometry (.geom).  The 3jsbot_rrt_connect.js stencil has provide routines that describe how new vertices can be added to the RRT.  One a viable motion plan is found, this path can be highlighted by changing the color of the RRT vertex geom indicators, similar to the following:
-
-<pre><code data-language="javascript">
-        robot_path[i].geom.material.color = {r:1,g:0,b:0};
-</code></pre>
-<p>
-
-The user should should be able to interactively move the robot through the found plan.  After adding the following code below to user_input() in 3jsbot_userinput.js, the "n" and "b" keys to move the robot to the next and previous configuration in the found path, respectively.
-
-<pre><code data-language="javascript">
-    // traverse generated motion plan
-    if ( keyboard.pressed("n") |  keyboard.pressed("b")) {
-        if (typeof robot_path !== 'undefined') {
-
-            // increment index
-            if ((keyboard.pressed("n"))&&(robot_path_traverse_idx<robot_path.length-1))
-                robot_path_traverse_idx++;
-            if ((keyboard.pressed("b"))&&(robot_path_traverse_idx>0))
-                robot_path_traverse_idx--;
-
-             // set angle
-            robot.origin.xyz = [
-                robot_path[robot_path_traverse_idx].vertex[0],
-                robot_path[robot_path_traverse_idx].vertex[1],
-                robot_path[robot_path_traverse_idx].vertex[2]
-            ];
-
-            robot.origin.rpy = [
-                robot_path[robot_path_traverse_idx].vertex[3],
-                robot_path[robot_path_traverse_idx].vertex[4],
-                robot_path[robot_path_traverse_idx].vertex[5]
-            ];
-
-            for (x in robot.joints) {
-                //q_names[x] = q_start_config.length;
-                robot.joints[x].angle = robot_path[robot_path_traverse_idx].vertex[q_names[x]];
-            }
-        }
-    }
-</code></pre>
-
-Note: we are <b>NOT</b> using robot.controls to execute the found path of the robot.  Although this can be done, the collision system does not currently test for configurations that occur due to the motion between configurations.
-
-<h3>Testing</h3>
-
-<p>
-<img src="asgn6_scurve_small.png" width=800>
-
-<p>
-Make sure to test from a reasonable set of robots and initial configurations within all of the provided worlds, ensuring that:
-
-<p>
-<ul>
-<li> a valid non-colliding path is found and can be traversed
-<li> the robot does not to take steps longer than 1 unit
-<li> the robot base does not move outside the X-Z plane.  Specifically, the base should not translate along the Y axis, and should not rotate about the X and Z axes.
-</ul>
-
-<p>
-The "br2" robot should be able to navigate all of the provided worlds.
-
-<h3>Optional: HTML5 Canvas Stencil </h3>
-
-<img src="asgn6_rrt_canvas_stencil_small.png">
-
-<p>
-Using the browser for as a development environment has many benefits.  However, when coding mistakes occur, it will make the browser lock up and be completely unusable.  This becomes even worse when the overhead of rendering with threejs is involved.  
-
-<p>
-To help you get started, the code stencil also has a "rrt_canvas" directory where you can implement your RRT in 2D worlds with provided routines for visualization and collision.  Because the RRT is invariant across configuration spaces, an RRT developed for the 2D Canvas world should easily port to the N-D threejs world, with minor changes for invoking drawing routines.
-
-<p>
-
-<h3>Update</h3>
-<p>
-You will need to modify the forward kinematics calls in 3jsbot_collision.js.  3jsbot_collision.js uses matrix and quaternion calls based on the reference implementation (i.e., my code).  Your matrix and quaternion calls likely have a different structure to the function arguments and returned data structures.  You should either:
-
- <ul> 
-  <li>1) modify calls to matrix/quaternion routines to fit your functions, or
-
-  <li>2) use a modified version of your own FK with the collision test added to the link traversal function (remember: you need the inverse of the matrix stack for collision testing in a link frame)
-</ul>
-<p>
-
-Also, you can feel free to numeric.inv() instead of matrix_invert_affine().  Affine transforms can be inverted (in constant time) through a much simpler process than the generic matrix inversion, which is O(n^3) for Gaussian elimination. 
-<p>
-
-<h2 id="assignment7">Assignment 7: The best use of robotics? </h2>  
-<p>
-<b>Due 3pm, Friday, April 28, 2014</b>
-<p>
-
-Scenario: An investor is considering giving you 3 million dollars (cold hard USD cash, figuratively).  This investor has been impressed by work with 3jsbot and other accomplishments while at Brown.  They are convinced you have the technical ability to make a compelling robot technology... but, they are unsure how this technology could produce something useful.  Your task is to make a convincing pitch for a  robotics project that would yield a high return on investment. 
-<p>
-You will get 2 minutes to make a pitch to develop something useful with robots.  Consider the instructor and your classmates as the people that need to be convinced.  As a guideline, your pitch should address an opportunity (presented by a need or a problem), your planned result (as a system, technology, product, and/or service), and how you will measure successful return on investment.  Return on investment can be viewed as financial profit (wrt. venture capital), good for society (wrt. a government program), creation of new knowledge or capabilities (wrt. a grant for scientific research).  Remeber, the purpose is to convince and inspire about what is possible, rather than dive into specifics.
-<p>
-The last scheduled class period (Monday April 28, 3-5pm) will be dedicated to student presentations to pitch ideas on the best use of robotics.  Please email your slides to the instructor before 10am on April 28 with the subject line ("Asgn7 pitch slides").  OS X Keynote will be used as the sole means of slide presentation, and will be timed and controlled by the instructor.  As such, slide materials can be accepted as Keynote, Powerpoint (no guarantees on conversion), PDF, and common image and video formats (JPG, PNG, MP4, FLV, etc.)
-<p>
-The pitch judged to be the most convincing will get first dibs.
-<p>
-
-<p>
-<br>
-<br>
-
-<img src="http://farm3.static.flickr.com/2082/5713400530_eac4bbb8ef_z.jpg">
-
-<!--
-        <h2>Get Started</h2>
-
-        <ul>
-            <li class="yui3-menu-active"></li>
-            <li><a href="http://github.com/BrownCS148/">Github</a></li>
-            <li><a href="http://github.com/tilomitra/">Other Projects</a></li>
-        </ul>
-
-    <div class="content">
-        <h2>Get Started</h2>
-        <p><a href="http://github.com/tilomitra/prettypages/">PrettyPages</a> is just an HTML template that makes it easy for you to create nice looking Github Pages for your projects. This page was created using PrettyPages. </p>
-
-        <a href="http://github.com/tilomitra/prettypages/" class="yui3-button primary-button">View on Github</a>
-
-        <h2>About</h2>
-        
-        <p>PrettyPages comes with a flat horizontal menu, where you can place links, and add the title of your project. This menu is responsive at lower screen sizes.</p>
-
-        <p>You can also add pretty code snippets that have syntax highlighting thanks to <a href="http://craig.is/making/rainbows">RainbowJS</a>! These come in a variety of different <a href="https://github.com/ccampbell/rainbow/tree/master/themes">themes</a>.</p>
-
-<pre><code data-language="javascript">
-    YUI().use('node', function(Y) {
-      Y.log('YUI Loaded. Vroom vroom!');
-    });
-
-</code></pre>
-
-        <p>You can also display nice looking buttons thanks to YUI's CSSButton module. Add the <code>.yui3-button</code> class to a <code>a</code> element to make a nice looking button, and add the <code>primary-button</code> class to make a really big callout button.</p>
-
-        <a class="yui3-button">Regular button</a>
-        <a class="yui3-button primary-button">Primary button</a>
-
-
-        <h2>More Content</h2>
-        <p>
-            In general, all your content should be placed inside a <code>div class="content"</code>. You can use <code>code</code> elements to highlight inline-code. If you want sub-headings, those are nicely styled too. 
-        </p>
-
-        <h3>A sub-heading</h3>
-
-        <p>
-            Use <code>h3</code> for subheadings! If you want something smaller, you can go for an <code>h4</code>.
-        </p>
-
-        <h4>A sub-sub heading</h4>
-        <p>That's what an <code>h4</code> looks like.</p>
-
--->
 
         <!-- TYPEKIT -->
         <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
