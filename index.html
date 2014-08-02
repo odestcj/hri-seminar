@@ -57,32 +57,17 @@
      </div>
     <div class="content">
 <p>
-<center><img src="header1.jpg"></center>
+<center><h2>"Creating usability interactive maps from Robot sensing"</h2></center>
+<center><img src="RGBD_map_matt.png"></center>
 
         <h2>Introduction</h2>
 
 <p>
 
-CS1950-E is a seminar course on Human-Robot Interaction. The theme of this course this fall is going to be "Creating usability interactive maps from Robot sensing". We will introduce you to the perceptual problems and challenges involved in robotics. In the process you will be going through some basics in robot sensing (from Odometry, Lasers, RGBD Sensors and Camera), mapping and state estimation problems like localization and SLAM. We will essentially discuss conference papers covering 4 topics such as 1) Smoothing RGBD data from Kinect, 2) RGBD Mapping, 3) History of SLAM in robotics (EKF, SGD, FastSLAM) and 4) Optimization techniques used in mapping and SLAM (iSAM, ICP). This course focuses on SLAM part of robotics and how human interaction on these maps would help in building better maps. 
-Below are some of the recent research developments on these topics for your motivation.
-<center>
-<p>Smoothing RGBD data from Kinect</br>
- <embed width="420" height="345"
-src="http://youtu.be/FqHroDuo_I8" type="application/x-shockwave-flash">
+CS1950-E is a seminar course on Human-Robot Interaction. The theme of this course in fall 2015 is going to be "Creating usability interactive maps from Robot sensing". Google maps that we use in our daily life is built using satelite images, street views and GPS data. To make use of this map, it has to be labelled properly making use of location information, GPS locations, routes and etc. Once it is labelled, algorithms are develop to plan a route between locations based on many constraints like the shortest path, fastest path, for public transport and so on. After having the planning module setup for all the constraints the google map is ready to be used. Similarly for a robot to move across the locations in a building autonomously it requires a map building phase followed by a labelling phase and then a planning phase. In this course we will focus on building maps using RGBD sensors followed by interactively labelling these maps so that they can be used to plan a task. 
+</br>
 
-
-<p>RGBD Mapping</br>
- <embed width="420" height="345"
-src="http://youtu.be/58_xG8AkcaE" type="application/x-shockwave-flash">
-
-<p>SLAM</br>
- <embed width="420" height="345"
-src="http://youtu.be/3BNOsxMZD14" type="application/x-shockwave-flash">
-
-<p>iSAM</br>
- <embed width="420" height="345"
-src="http://youtu.be/cNF5vksmY6s" type="application/x-shockwave-flash">
-</center>
+ We will introduce you to the perceptual challenges involved in robotics when building a good map. In the process you will be going through some basics in robot sensing (from Odometry, Lasers, RGBD Sensors and Camera), mapping and state estimation problems like localization and SLAM. We will essentially discuss conference papers covering 5 topics such as <b>1) Smoothing RGBD data from Kinect, 2) RGBD Mapping, 3) History of SLAM in robotics (SGD, FastSLAM, EKF) 4) Optimization techniques used in mapping and SLAM (iSAM, ICP), and 5) Human interaction with the RGBD data </b>. This course focuses on SLAM part of robotics and how human interaction on these maps would help in building better maps. 
 
 <!--We answer this question through a series of lectures, class discussions, and group projects. -->
 <p>
@@ -91,16 +76,14 @@ This year, CS1950-E course work will involve each individual discussing atleast 
 
 <p>
 
-<h2>Instructor</h2>
-
-<p>Chad Jenkins 
+<h2>Instructor</h2> Prof. Chad Jenkins 
+<h3>Office Hours</h3> TBA
+</br>
+<h2>Teaching Assistant</h2> Karthik Desingh
+<h3>Office Hours</h3> TBA
+</br>
 <p>
-<h3>Office Hours</h3> 
-<P>
-TBA
-<br>
-TBA
-<p>
+</br>
 Prof. Jenkins administative support person is Suzanne Alden.
 
 <h2>Meeting time/place</h2>
@@ -170,6 +153,407 @@ CS1950E can be taken for 200-level (graduate) credit.  For 200-level credit, a g
 The code for your implementation may not be shown to anyone outside of your group, including granting access to repositories or careless lack of protection. You do not need to hide the screen from anyone, but you should not attempt to show anyone your code. When you are done using any robot device such that another group may use it, you must remove all code you have put onto the device. You may not share your code with others outside of your group. At any time, you may show others the implemented program running on a device or simulator, but you may not discuss specific debugging details about your code while doing so.
 
 Should you fail to abide by this policy, you will receive no credit for this course. Brown also reserves the right to pursue any means necessary to ensure compliance. This includes, but is not limited to prosecution through Brown University’s Student Conduct Procedures, which can result in your suspension or expulsion from the University 
+
+<h2><i>Tentative</i> Syllabus</h2>
+<table cellpadding=5 border=1  width="100%">
+<tr>    
+        <td style="width:100px"><b>Class Date</b></td> 
+        <td style="width:350px"><b>Topic</b></td>
+        <td style="width:100px"><b>Slides</b></td>
+        <td style="width:200px"><b>Reading</b></td>
+        <td style="width:100px"><b>Projects</b></td>
+</tr>
+
+<tr>
+    <td>W, Sept 4</td>
+    <td>Introduction to computer vision</td>
+    <td><a href="lectures/01.pptx">.ppt</a>, <a href="lectures/01.pdf">.pdf</a></td> 
+    <td>Szeliski 1</td> 
+    <td></td> 
+</tr>
+
+<tr><td colspan="5" style="background-color:#FFC6A5">
+<center>Image Formation and Filtering</center>
+</td></tr>
+
+<tr>
+    <td>F, Sep 6</td>
+    <td>Cameras and optics</td>
+    <td><a href="lectures/02.pptx">.ppt</a>, <a href="lectures/02.pdf">.pdf</a></td> 
+    <td>Szeliski 2.1, especially 2.1.5</td> 
+    <td><a href="proj1/index.html">Project 1 out</a></td>
+</tr>
+
+<tr>
+    <td>M, Sep 9</td>
+    <td>Light and color</td>
+    <td><a href="lectures/03.ppt">.ppt</a>, <a href="lectures/03.pdf">.pdf</a></td> 
+    <td>Szeliski 2.2 and 2.3</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Sep 11</td>
+    <td>Image filtering</td>
+    <td><a href="lectures/04.ppt">.ppt</a>, <a href="lectures/04.pdf">.pdf</a></td> 
+    <td>Szeliski 3.2</td>
+    <td></td>                                                            
+</tr>
+
+<tr>
+    <td>F, Sep 13</td>
+    <td>Thinking in frequency</td>
+    <td><a href="lectures/05.ppt">.ppt</a>, <a href="lectures/05.pdf">.pdf</a></td> 
+    <td>Szeliski 3.4</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Sep 16</td>
+    <td>Image pyramids and applications</td>
+    <td><a href="lectures/06.ppt">.ppt</a>, <a href="lectures/06.pdf">.pdf</a></td> 
+    <td>Szeliski 3.5.2 and 8.1.1</td>
+    <td></td>
+</tr>
+
+<tr><td colspan="5" style="background-color:#C6C6FF">
+<center>Feature Detection and Matching</center>
+</td></tr>
+
+<tr>
+    <td>W, Sep 18</td>
+    <td>Edge detection</td>
+    <td><a href="lectures/07.ppt">.ppt</a>, <a href="lectures/07.pdf">.pdf</a></td> 
+    <td>Szeliski 4.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Sep 20</td>
+    <td>Interest points and corners</td>
+    <td><a href="lectures/08.ppt">.ppt</a>, <a href="lectures/08.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.1</td>
+    <td>Project 1 due</td>
+</tr>
+
+<tr>
+    <td>M, Sept 23</td>
+    <td>Local image features</td>
+    <td><a href="lectures/09.pptx">.ppt</a>, <a href="lectures/09.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.2</td>
+    <td><a href="proj2">Project 2 out</a></td>
+</tr>
+
+<tr>
+    <td>W, Sept 25</td>
+    <td>Feature matching and hough transform</td>
+   <td><a href="lectures/10.pptx">.ppt</a>, <a href="lectures/10.pdf">.pdf</a></td> 
+    <td>Szeliski 4.1.3 and 4.3.2</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>F, Sept 27</td>
+    <td>Model fitting and RANSAC</td>
+    <td><a href="lectures/11.pptx">.ppt</a>, <a href="lectures/11.pdf">.pdf</a></td> 
+    <td>Szeliski 6.1</td>
+    <td></td>
+</tr>
+
+
+<tr><td colspan="5" style="background-color:#F7BDDE">
+<center>Multiple Views and Motion</center>
+</td></tr>
+
+
+<tr>
+    <td>M, Sept 30</td>
+    <td>Stereo</td>
+    <td><a href="lectures/12.ppt">.ppt</a>, <a href="lectures/12.pdf">.pdf</a></td> 
+    <td>Szeliski 11</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 2</td>
+    <td>Epipolar Geometry and Structure from Motion</td>
+    <td><a href="lectures/13.ppt">.ppt</a>, <a href="lectures/13.pdf">.pdf</a></td> 
+    <td>Szeliski 7</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Oct 4</td>
+    <td>Feature Tracking and Optical Flow</td>
+    <td><a href="lectures/14.ppt">.ppt</a>, <a href="lectures/14.pdf">.pdf</a></td> 
+    <td>Szeliski 8.1 and 8.4</td>
+    <td></td>
+</tr>
+
+<tr><td colspan="5" style="background-color:#FFFFC6">
+<center>Machine Learning Crash Course</center>
+</td></tr>
+
+<tr>
+    <td>M, Oct 7</td>
+    <td>Machine learning intro and clustering</td>
+    <td><a href="lectures/15.ppt">.ppt</a>, <a href="lectures/15.pdf">.pdf</a></td> 
+    <td>Szeliski 5.3</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 9</td>
+    <td>Machine learning: clustering continued</td>
+    <td><a href="lectures/16.ppt">.ppt</a>, <a href="lectures/16.pdf">.pdf</a></td> 
+    <td>Szeliski 5.3</td>
+    <td>Project 2 due</td>
+</tr>
+
+<tr>
+    <td>F, Oct 11</td>
+    <td>Machine learning: classification</td>
+    <td><a href="lectures/17.ppt">.ppt</a>, <a href="lectures/17.pdf">.pdf</a></td> 
+    <td></td>
+    <td><A href="proj3">Project 3 out</a></td>
+</tr>
+
+
+<tr>
+    <td>M, Oct 14</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+
+<tr>
+    <td>W, Oct 16</td>
+    <td><font color="blue">Quiz 1</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr><td colspan="5" style="background-color:#C6E7DE">
+<center>Recognition</center>
+</td></tr>
+
+<tr>
+    <td>F, Oct 18</td>
+    <td>Recognition overview and bag of features</td>
+    <td><a href="lectures/18.ppt">.ppt</a>, <a href="lectures/18.pdf">.pdf</a></td> 
+    <td>Szeliski 14</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Oct 21</td>
+    <td>Large-scale instance recognition</td>
+    <td><a href="lectures/19.ppt">.ppt</a>, <a href="lectures/19.pdf">.pdf</a></td> 
+    <td>Szeliski 14.3.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 23</td>
+    <td>Detection with sliding windows: Viola Jones</td>
+    <td><a href="lectures/20.ppt">.ppt</a>, <a href="lectures/20.pdf">.pdf</a></td> 
+    <td>Szeliski 14.1</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>F, Oct 25</td>
+    <td>Detection continued and Quiz 1 discussion</td>
+    <td>See above</td>
+    <td>Szeliski 14.2</td>
+    <td></td>
+
+</tr>
+
+<tr>
+    <td>M, Oct 28</td>
+    <td>Scene recognition with SUN database</td>
+    <td><a href="lectures/22.pptx">.ppt</a>, <a href="lectures/22.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Oct 30</td>
+    <td>Mixture of Gaussians and advanced feature encoding</td>
+    <td><a href="lectures/23.ppt">.ppt</a>, <a href="lectures/23.pdf">.pdf</a></td> 
+    <td></td>
+    <td>Project 3 Due</td>
+</tr>
+
+<tr>
+    <td>F, Nov 1</td>
+    <td>Modern object detection</td>
+    <td><a href="lectures/24.pptx">.ppt</a>, <a href="lectures/24.pdf">.pdf</a></td> 
+    <td>Szeliski 14.1</td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 4</td>
+    <td>Internet scale vision, pt 1</td>
+    <td><a href="lectures/25.ppt">.ppt</a>, <a href="lectures/25.pdf">.pdf</a></td> 
+    <td>Szeliski 14.5</td>
+    <td><a href="proj4">Project 4 out</a></td>
+</tr>
+
+<tr>
+    <td>W, Nov 6</td>
+    <td>Internet scale vision, pt 2</td>
+    <td><a href="lectures/26.ppt">.ppt</a>, <a href="lectures/26.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 8</td>
+    <td><font color="green">Guest lecture: Carl Vondrick, HOGgles</font></td>
+    <td><a href="http://web.mit.edu/vondrick/ihog/">Project page</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 11</td>
+    <td>Human computation and crowdsourcing</td>
+    <td><a href="lectures/27.ppt">.ppt</a>, <a href="lectures/27.pdf">.pdf</a></td> 
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Nov 13</td>
+    <td>Attributes and more crowdsourcing</td>
+    <td><a href="lectures/28.ppt">.ppt</a>, <a href="lectures/28.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 15</td>
+    <td>Sketch Recognition and more crowdsourcing</td>
+    <td><a href="lectures/29.ppt">.ppt</a>, <a href="lectures/29.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+
+<tr>
+    <td>M, Nov 18</td>
+    <td>Modern boundary detection and Pb</td>
+    <td><a href="lectures/30.ppt">.ppt</a>, <a href="lectures/30.pdf">.pdf</a></td>
+    <td>Szeliski 4.2</td>
+    <td>Project 4 due</td>
+</tr>
+
+
+
+<tr>
+    <td>W, Nov 20</td>
+    <td>Modern boundary detection and sketch tokens</td>
+    <td><a href="lectures/31.ppt">.ppt</a>, <a href="lectures/31.pdf">.pdf</a>, <a href="http://vision.caltech.edu/~mmaire/papers/pdf/mafm_cvpr2008_slides.pdf">gPb</a>, <a href="http://people.csail.mit.edu/lim/paper/SketchTokens_cvpr13.pdf">Sketch Tokens</a></td>
+    <td>Szeliski 4.2</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 22</td>
+    <td><font color="green">Guest lecture: Sobhan Parizi, Deformable Part Models</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Nov 25</td>
+    <td>Project 5 introduction</td>
+    <td><a href="lectures/32.ppt">.ppt</a>, <a href="lectures/32.pdf">.pdf</a></td>
+    <td>Szeliski 5.5</td>
+    <td><a href="proj5">Project 5 out</a></td>
+</tr>
+
+
+<tr>
+    <td>W, Nov 27</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Nov 29</td>
+    <td><font color="D60000">No classes</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Dec 2</td>
+    <td>Context and Spatial Layout</td>
+    <td><a href="lectures/33.ppt">.ppt</a>, <a href="lectures/33.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Dec 4</td>
+    <td>Context and Scene parsing</td>
+    <td><a href="lectures/34.pptx">.ppt</a>, <a href="lectures/34.pdf">.pdf</a></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>F, Dec 6</td>
+    <td><font color="blue">Quiz 2</font></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>M, Dec 9</td>
+    <td>No classes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>W, Dec 11</td>
+    <td>No classes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>S, Dec 14, 2:00 PM</td>
+    <td><font color="blue">Exam Period</font> - not used</td>
+    <td></td>
+    <td></td>
+    <td>Project 5 due</td>
+</tr>
+
+</table>
+
 
 
 <h2 id="schedule">Tentative Schedule</h2>
