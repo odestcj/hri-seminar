@@ -122,23 +122,29 @@ TBA
 
 
 <h2>Prerequisites:</h2> 
+Required: CS 15, 17, or 19</br>
+Highly Recommended: Linear Algebra</br>
+Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
+<br>
 
-Highly Recommended: Linear alegebra</br>
-I will do my best to cover the necessary material, but no guarantees. Computer vision and AI share common concepts with this course.
 
-<h2>List of papers covered in the course</h2>
-<h2 id="schedule">Tentative Syllabus and Schedule</h2>
+<h2 id="schedule">Schedule (tentative)</h2>
+
+<!-- cjenkins: partial citations for papers formatted as: title, abbreviated author list, venue (with volume and number if journal), year. -->
+
 <table cellpadding=5 border=1  width="100%">
 <tr>    
-        <td style="width:100px"><b><center>Week / Date</center></b></td> 
-        <td style="width:375px"><b><center>Class session</center></b></td>
+        <td style="width:30px"><b><center>Week</center></b></td> 
+        <td style="width:50px"><b><center>Date</center></b></td> 
+        <td style="width:600px"><b><center>Class session</center></b></td>
         <td style="width:200px"><b><center>Lab session</center></b></td>
         <td style="width:75px"><b><center>Slides</center></b></td>
         <td style="width:100px"><b><center>Projects</center></b></td>
 </tr>
 
 <tr>
-    <td>W1, Sept 8</td>
+    <td>1</td>
+    <td>Sept 8</td>
     <td>Introduction, Paper assignments</td>
     <td>RGBD SLAM demos</td>
     <td></td> 
@@ -146,11 +152,13 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W2, Sep 15</td>
+    <td>2</td>
+    <td>Sept 15</td>
     <td>
-	    Paper1: <a href="http://www.cs.tau.ac.il/~dcor/online_papers/papers/points_set_vis01.pdf">Marc Alexa et al: Point Set Surface</a>
-	    </br>
-	    Paper2: <a href="http://infoscience.epfl.ch/record/149334/files/pauly_2003_SMP.pdf">Mark Paul et al: Shape Modeling with Point-Sampled Geometry</a>
+	    <a href="http://www.cs.tau.ac.il/~dcor/online_papers/papers/points_set_vis01.pdf">Point Set Surfaces</a>, Alexa et al., Visualization 2001.
+	    <br>
+	    <br>
+	    <a href="http://infoscience.epfl.ch/record/149334/files/pauly_2003_SMP.pdf">Shape Modeling with Point-Sampled Geometry</a>, Pauly et al., Siggraph 2003.
 	    
     </td>
     <td>Introduction to Point Cloud Library</td> 
@@ -159,11 +167,15 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W3, Sep 22</td>
+    <td>3</td>
+    <td>Sept 22</td>
     <td>
-	    Paper1: <a href="http://www.willowgarage.com/sites/default/files/Rusu08RAS-Semantic.pdf">Radu Rusu et al: Towards 3D Point cloud based object maps for household environments</a>
-	    </br>
-	    Paper2: <a href="http://www.computer-graphics.cn/publications/zhiquan_pbg2008.pdf">A survey of methods for MLS Surfaces</a>
+	    <a href="http://www.willowgarage.com/sites/default/files/Rusu08RAS-Semantic.pdf">Towards 3D Point cloud based object maps for household environments</a>, Rusu et al., Robotics and Autonomous Systems, 56(11).
+	    <br>
+	    <br>
+	    <a href="https://www.willowgarage.com/sites/default/files/icra11_0.pdf">3D is here: Point Cloud Library</a>, Rusu and Cousins, ICRA 2011, 2011.
+	    <!-- cjenkins: not sure this paper adds much to our discussion <a href="http://www.computer-graphics.cn/publications/zhiquan_pbg2008.pdf">A survey of methods for MLS Surfaces</a>-->
+	    <!-- cjenkins: considering to add NASA affordance template paper instead, need to ask Steve if there are good options -->
     </td>
     <td>Hacking session on Project 1</td> 
     <td></td>
@@ -171,7 +183,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W4, Sep 29</td>
+    <td>4</td>
+    <td>Sept 29</td>
     <td>
 	    Transformation refresher
 	    </br>
@@ -183,7 +196,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W5, Oct 6</td>
+    <td>5</td>
+    <td>Oct 6</td>
     <td>
 	    Paper1: <a href="http://www2.informatik.uni-freiburg.de/~endres/files/publications/endres13tro.pdf">Felix Endres et al: 3D Mapping with an RGB-D Camera</a></br>
 	    Paper2: <a href="http://www.i3s.unice.fr/~comport/publications/2013_IROS_Meilland.pdf">Maxime Meilland et al: On unifying key-frame and voxel-based dense visual SLAM at large scales</a>
@@ -194,7 +208,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W6, Oct 13</td>
+    <td>6</td>
+    <td>Oct 13</td>
     <td>
 	    Paper1: <a href="http://rvsn.csail.mit.edu/content/eolson/graphoptim/eolson-graphoptim2006.pdf">Edwin Olson et al: Fast Iterative Alignment of Pose Graphs with Poor Initial Estimates</a>
 	    </br>
@@ -206,7 +221,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W7, Oct 20</td>
+    <td>7</td>
+    <td>Oct 20</td>
     <td>
 	    Paper1: <a href="http://www.ananth.in/Publications_files/Kaess07icra.pdf">Frank Dellaert et al: iSAM: Fast Incremental Smoothing and Mapping with Efficient Data Association</a>
 	    </br>
@@ -218,7 +234,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W8, Oct 27</td>
+    <td>8</td>
+    <td>Oct 27</td>
     <td>
 	    Paper1: <a href="http://ai.stanford.edu/~koller/Papers/Montemerlo+al:AAAI02.pdf">FastSLAM</a>
 	    </br>
@@ -230,7 +247,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W9, Nov 3</td>
+    <td>9</td>
+    <td>Nov 3</td>
     <td>
 	    Paper1: <a href="http://cg.cs.tsinghua.edu.cn/papers/SIGASIA-2013-3sweep.pdf">3-Sweep: Extracting Editable Objects from a Single Photo</a>
 	    </br>
@@ -242,7 +260,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W10, Nov 10</td>
+    <td>10</td>
+    <td>Nov 10</td>
     <td>
 	    Paper1: TBA
 	    </br>
@@ -254,7 +273,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W11, Nov 17</td>
+    <td>11</td>
+    <td>Nov 17</td>
     <td>
     	Paper1: TBA
 	    </br>
@@ -266,15 +286,17 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W12, Nov 24</td>
-    <td>Holiday</td>
+    <td>12</td>
+    <td>Nov 24</td>
+    <td>Thanksgiving Break</td>
     <td></td> 
     <td></td>
     <td></td>
 </tr>
 
 <tr>
-    <td>W13, Dec 1</td>
+    <td>13</td>
+    <td>Dec 1</td>
     <td>Main project checkin meeting</td>
     <td>Hacking session on final project</td> 
     <td></td>
@@ -282,7 +304,8 @@ I will do my best to cover the necessary material, but no guarantees. Computer v
 </tr>
 
 <tr>
-    <td>W14, Dec 8</td>
+    <td>14</td>
+    <td>Dec 8</td>
     <td>Final Project demos and Presentation</td>
     <td></td> 
     <td></td>
