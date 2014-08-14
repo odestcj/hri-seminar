@@ -64,7 +64,7 @@
 <!--
 <center><h2>Creating Human  interactive maps from Robot sensing"</h2></center>
 -->
-<center><img width=800 src="RGBD_map_matt.png"></center>
+<center><img width=800 src="134_table.png"></center>
 
         <h2>Introduction</h2>
 
@@ -120,11 +120,15 @@ CIT Lubrano (Class session) and CIT 134 (Lab session)
 <h2>Mailing list:</h2>
 TBA
 
+<h2>Optional Textbook</h2>
+<a href="http://www.robots.ox.ac.uk/~vgg/hzbook/">Multi-view Geometry in Computer Vision</a>, Hartley and Zisserman, Cambridge University Press, 2004.
 
 <h2>Prerequisites:</h2> 
-Required: CS 15, 17, or 19</br>
-Highly Recommended: Linear Algebra</br>
-Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
+<p>
+Linear Algebra (CS 53 or equivalent) <p> 
+and one of: <br>
+Autonomous Robotics (CS 148), Computer Vision (CS 143), Computer Graphics (CS 123), Artificial Intelligence (CS 141)  <p>
+or instructor permission
 <br>
 
 
@@ -145,7 +149,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
 <tr>
     <td>1</td>
     <td>Sept 8</td>
-    <td>Introduction, Paper assignments</td>
+    <td>
+         <u> Initialization </u><br>
+         Introduction, Paper assignments, etc.
+    </td>
     <td>RGBD SLAM demos</td>
     <td></td> 
     <td>Project 1 - MLS out</td> 
@@ -155,10 +162,11 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>2</td>
     <td>Sept 15</td>
     <td>
-	    <a href="http://www.cs.tau.ac.il/~dcor/online_papers/papers/points_set_vis01.pdf">Point Set Surfaces</a>, Alexa et al., Visualization 2001.
+            <u> Point-based Modeling </u><br><br>
+	    <a href="http://www.cs.tau.ac.il/~dcor/online_papers/papers/points_set_vis01.pdf">Point Set Surfaces</a>, Alexa et al., IEEE Visualization, 2001.
 	    <br>
 	    <br>
-	    <a href="http://infoscience.epfl.ch/record/149334/files/pauly_2003_SMP.pdf">Shape Modeling with Point-Sampled Geometry</a>, Pauly et al., Siggraph 2003.
+	    <a href="http://infoscience.epfl.ch/record/149334/files/pauly_2003_SMP.pdf">Shape Modeling with Point-Sampled Geometry</a>, Pauly et al., ACM SIGGRAPH, 2003.
 	    
     </td>
     <td>Introduction to Point Cloud Library</td> 
@@ -170,10 +178,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>3</td>
     <td>Sept 22</td>
     <td>
+            <u> Point cloud processing </u><br><br>
 	    <a href="http://www.willowgarage.com/sites/default/files/Rusu08RAS-Semantic.pdf">Towards 3D Point cloud based object maps for household environments</a>, Rusu et al., Robotics and Autonomous Systems, 56(11).
-	    <br>
-	    <br>
-	    <a href="https://www.willowgarage.com/sites/default/files/icra11_0.pdf">3D is here: Point Cloud Library</a>, Rusu and Cousins, ICRA 2011, 2011.
+	    <br> <br>
+	    <a href="https://www.willowgarage.com/sites/default/files/icra11_0.pdf">3D is here: Point Cloud Library</a>, Rusu and Cousins, International Conference on Robotics and Automation, 2011.
 	    <!-- cjenkins: not sure this paper adds much to our discussion <a href="http://www.computer-graphics.cn/publications/zhiquan_pbg2008.pdf">A survey of methods for MLS Surfaces</a>-->
 	    <!-- cjenkins: considering to add NASA affordance template paper instead, need to ask Steve if there are good options -->
     </td>
@@ -186,9 +194,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>4</td>
     <td>Sept 29</td>
     <td>
-	    Transformation refresher
-	    </br>
-	    Paper1: <a href="http://www2.seattle.intel-research.net/~xren/publication/3d-mapping-iser-10-final.pdf">Dieter Fox et al: RGBD Mapping: sing Depth Cameras for Dense 3D Modeling of Indoor Environments</a>
+            <u> RGBD Mapping </u><br><br>
+	    <i>In-class refresher: 3D transforms and odometry</i>
+	    <br> <br>
+	    <a href="http://www2.seattle.intel-research.net/~xren/publication/3d-mapping-iser-10-final.pdf">RGBD Mapping: Using Depth Cameras for Dense 3D Modeling of Indoor Environments</a>, Henry et al., International Symposium on Experimental Robotics, 2010.
     </td>
     <td>Project 1 due - MLS demos</td> 
     <td></td>
@@ -199,8 +208,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>5</td>
     <td>Oct 6</td>
     <td>
-	    Paper1: <a href="http://www2.informatik.uni-freiburg.de/~endres/files/publications/endres13tro.pdf">Felix Endres et al: 3D Mapping with an RGB-D Camera</a></br>
-	    Paper2: <a href="http://www.i3s.unice.fr/~comport/publications/2013_IROS_Meilland.pdf">Maxime Meilland et al: On unifying key-frame and voxel-based dense visual SLAM at large scales</a>
+            <u> RGBD Mapping (continued) </u><br><br>
+	    <a href="http://www2.informatik.uni-freiburg.de/~endres/files/publications/endres13tro.pdf">3D Mapping with an RGB-D Camera</a> Endres et al., IEEE Transactions on Robotics, 30(1), 2014.
+	    <br> <br>
+	    <a href="http://www.i3s.unice.fr/~comport/publications/2013_IROS_Meilland.pdf">On unifying key-frame and voxel-based dense visual SLAM at large scales</a>, Meilland and Comport, IEEE Intelligent Robots and Systems, 2013.
     </td>
     <td>Paper discussion will continue</br>Hacking session on Project 2</td> 
     <td></td>
@@ -211,9 +222,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>6</td>
     <td>Oct 13</td>
     <td>
-	    Paper1: <a href="http://rvsn.csail.mit.edu/content/eolson/graphoptim/eolson-graphoptim2006.pdf">Edwin Olson et al: Fast Iterative Alignment of Pose Graphs with Poor Initial Estimates</a>
-	    </br>
-	    Paper2: <a href="http://www.roboticsproceedings.org/rss08/p40.pdf">Edwin Olson et al: Inference on networks of mixtures for robust robot mappingMat mixtures</a>
+            <u> SLAM and Graph Optimization </u><br><br>
+	    <a href="http://rvsn.csail.mit.edu/content/eolson/graphoptim/eolson-graphoptim2006.pdf">Fast Iterative Alignment of Pose Graphs with Poor Initial Estimates</a>, Olson et al., International Conference on Robotics and Automation, 2006.
+	    <br> <br>
+	    <a href="http://www.roboticsproceedings.org/rss08/p40.pdf">Inference on networks of mixtures for robust robot mapping</a>, Olson and Agarwal, Robotics: Science and Systems, 2012.
     </td>
     <td>Project 2 due - RGBD map demos</td> 
     <td></td>
@@ -224,9 +236,10 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>7</td>
     <td>Oct 20</td>
     <td>
-	    Paper1: <a href="http://www.ananth.in/Publications_files/Kaess07icra.pdf">Frank Dellaert et al: iSAM: Fast Incremental Smoothing and Mapping with Efficient Data Association</a>
-	    </br>
-	    Paper2: <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1315094">Visual Odometry</a>
+            <u> SLAM and Graph Optimization (continued) </u><br><br>
+	    <a href="http://www.cc.gatech.edu/~kaess/pub/Kaess08tro.pdf">iSAM: Incremental Smoothing and Mapping</a>, Kaess et al., IEEE Transactions on Robotics, 24(6) 2008.
+	    <br> <br>
+	    <a href="http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.87.5313">Visual Odometry</a>, Nister et al., Computer Vision and Pattern Recognition, 2004.
     </td>
     <td>Hacking session on Project 3</td> 
     <td></td>
@@ -237,9 +250,11 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>8</td>
     <td>Oct 27</td>
     <td>
-	    Paper1: <a href="http://ai.stanford.edu/~koller/Papers/Montemerlo+al:AAAI02.pdf">FastSLAM</a>
+            <u> Geometry Labeling from Sketching </u><br><br>
+	    <a href="http://cg.cs.tsinghua.edu.cn/papers/SIGASIA-2013-3sweep.pdf">3-Sweep: Extracting Editable Objects from a Single Photo</a>, Chen et al., ACM SIGGRAPH Asia, 2013.
 	    </br>
-	    Paper2: <a href="http://everobotics.org/pdf/SLAMTutorial.pdf">EKF SLAM</a>
+	    <br> <br>
+	    <a href="http://www.robots.ox.ac.uk/~phst/Papers/2007/SIGGRAPH/Siggraph07FinalSmall.pdf">VideoTrace: Rapid interactive scene modelling from video</a>, van den Hengel et al., ACM SIGGRAPH, 2007.
     </td>
     <td>Project 3 demos</td> 
     <td></td>
@@ -250,9 +265,11 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>9</td>
     <td>Nov 3</td>
     <td>
-	    Paper1: <a href="http://cg.cs.tsinghua.edu.cn/papers/SIGASIA-2013-3sweep.pdf">3-Sweep: Extracting Editable Objects from a Single Photo</a>
+            <u> Human-Robot Interaction for Manipulation </u><br><br>
+	    <a href="http://smartech.gatech.edu/bitstream/handle/1853/42279/Towards%20Grounding%20Concepts%20for%20Transfer%20in%20Goal%20Learning%20from%20Demonstration.pdf">Towards grounding concepts for transfer in goal learning from demonstration</a>, Chao et al., International Conference on Development and Learning, 2011.
 	    </br>
-	    Paper2: <a href="http://www.robots.ox.ac.uk/~phst/Papers/2007/SIGGRAPH/Siggraph07FinalSmall.pdf">VideoTrace: Rapid interactive scene modelling from video</a>
+	    <br> <br>
+	    <a href="https://smartech.gatech.edu/jspui/bitstream/1853/37382/1/hri2008.pdf">A Point-and-Click Interface for the Real World: Laser Designation of Objects for Mobile Manipulation</a>, Kemp et al., Human-Robot Interaction Conference, 2008.
     </td>
     <td>Hacking session on Project 4</td> 
     <td></td>
@@ -263,9 +280,11 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>10</td>
     <td>Nov 10</td>
     <td>
-	    Paper1: TBA
+            <u> SLAM and State Estimation </u><br><br>
+	    <a href="http://everobotics.org/pdf/SLAMTutorial.pdf">Simultaneous Localization and Mapping: Part 1</a>, Durrant-Whyte and Bailey, IEEE Robotics and Automation Magazine, June 2006.
 	    </br>
-	    Paper2: TBA
+	    <br> <br>
+	    <a href="http://ai.stanford.edu/~koller/Papers/Montemerlo+al:AAAI02.pdf">FastSLAM: A Factored Solution to the Simultaneous Localization and Mapping Problem</a>, Montemerlo et al., AAAI, 2002.
     </td>
     <td>Project 4 demos</td> 
     <td></td>
@@ -276,9 +295,7 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
     <td>11</td>
     <td>Nov 17</td>
     <td>
-    	Paper1: TBA
-	    </br>
-	    Paper2: TBA
+         Final project proposal presentations
     </td>
     <td>Hacking session on final project</td> 
     <td></td>
@@ -318,16 +335,30 @@ Recommended: Autonomous Robotics, Computer Vision, Computer Graphics </br>
 <h2>Projects and Grading</h2>
 
 <p>
-There will be 4 programming projects and 1 final main project.  CS 1950E projects are graded as “checked” (completed) or “not checked” (incomplete). To receive an A grade in the course, you must have all 5 projects checked by the end of reading period. For a B grade, 4 programming projects must be checked. Less than 3 checks will result in no credit for the course.  The timing and due dates for these projects will be announced on an ongoing basis.
+CS1950E will assign 4 programming projects, 2 paper presentations, and 1 final project assigned in this course.  CS 1950E projects are graded as “checked” (completed) or “not checked” (incomplete). To receive an A grade in the course, you must present 2 papers in class and have all 5 projects checked by the end of reading period. For a B grade, 1 paper must be presented and 4 programming projects must be checked. Less than 3 checks or presenting 0 papers will result in no credit for the course.  If enrollment limits the number of presentation slots, the instructor may ask for the second paper presentation by a student be done by recorded video or written report.  The timing and due dates for these projects will be announced on an ongoing basis, with a tentative schedule above.
 </br>
+<p>
+The 4 programming projects will be:
+<ul>
+<li>Moving Least Squares: estimate the surface underlying a set of 3D points by implementing the Moving Least Squares algorithm</li>
+<li>RGBD Mapping: map a 3D geometry of space from RGBD depth video and odometry collected from a Kinect camera mounted on a robot</li>
+<li>SGD-SLAM: perform simultaneous localization and mapping for a pose graph of robot motion collected from odometry and given loop closures</li>
+<li>ICP-SLAM: map a 3D geometry of space from RGBD depth collected from a Kinect camera</li>
+</ul>
 
-All the project deadlines will have a demo by the students in the lab session. Final project will also require a presentation by students regarding the various methods they studied and employed. Additional results with additional maps
+<p>
+The final project involves the design and implementation of a human-usable interface for labeling a map built from the course programming assignments.  This interface should enable a random human user to create a geomtry for an object in a built map.
 
-<!--Git repositories will be used for project implementation, version control, and submission. Project implementations are submitted as branches in your assigned repository. These branches must be submitted prior to the due date for each assignment. Your implementation will be checked out and executed by the course staff. You will be notified by the course staff whether your implementation is sufficient for checking off the assignment. If your assignment is insufficient for receiving a check, your group is allowed one regrade (per assignment) with 2 weeks of notification. If deemed necessary, the course staff may require an interactive demonstration of your implementation and/or a web-based written report. -->
+<p>
+All the project deadlines will have a demo by the students in the lab session. Final project will also require a presentation by students regarding the various methods they studied and employed.  
+<p>
+Git repositories will be used for project implementation, version control, and submission. Project implementations are submitted as branches in your assigned repository. These branches must be submitted prior to the due date for each assignment. Your implementation will be checked out and executed by the course staff. You will be notified by the course staff whether your implementation is sufficient for checking off the assignment. If your assignment is insufficient for receiving a check, your group is allowed one regrade (per assignment) with 2 weeks of notification. If deemed necessary, the course staff may require an interactive demonstration of your implementation and/or a web-based written report.
 
 <h3>Final Grading</h3>
 
-All grading will be finalized on <b>TBA</b>.  Regrading of specific assignments will be done upon request during office hours.  No regrading will be done after grades are finalized.
+All grading will be finalized on <b>December 10, 2014</b>, after final project presentations.  
+
+<!--Regrading of specific assignments will be done upon request during office hours.  No regrading will be done after grades are finalized.-->
 
 <h3>Repositories</h3>
 
@@ -338,22 +369,14 @@ The course staff will provide a git repository (through github) for each student
 <p>
 Do not be late submitting assignments. The course staff reserves the right to not grade late submissions.  
 
-<h3>200-Level Credit</h3>
-<p>
-CS1950E can be taken for 200-level (graduate) credit.  For 200-level credit, a grad of A must be earned. <b>TBD</b>
-
 <h2>Collaboration Policy</h2>
 <p>
-<b>TBD</b>
- This policy covers all course material and assignments unless otherwise stated. Course material and Turtlebot/ROS information and documentation may be discussed with anyone. Course material does not include assignment handouts. Assignments may be discussed with the other cs1950E students. Discussions may make use of a whiteboard or paper. Discussions outside of your group cannot include writing or debugging code on a computer. You may take notes away from these discussions, provided these notes do not include any source code.
+
+ This policy covers all course material and assignments unless otherwise stated. Course material information and documentation may be discussed with anyone. Course material does not include assignment handouts. Assignments may be discussed with the other CS1950E students. Discussions may make use of a whiteboard or paper. Discussions outside of your group cannot include writing or debugging code on a computer. You may take notes away from these discussions, provided these notes do not include any source code.
 
 The code for your implementation may not be shown to anyone outside of your group, including granting access to repositories or careless lack of protection. You do not need to hide the screen from anyone, but you should not attempt to show anyone your code. When you are done using any robot device such that another group may use it, you must remove all code you have put onto the device. You may not share your code with others outside of your group. At any time, you may show others the implemented program running on a device or simulator, but you may not discuss specific debugging details about your code while doing so.
 
 Should you fail to abide by this policy, you will receive no credit for this course. Brown also reserves the right to pursue any means necessary to ensure compliance. This includes, but is not limited to prosecution through Brown University’s Student Conduct Procedures, which can result in your suspension or expulsion from the University 
-
-<p>
-<b>TBD</b>
-Slides from this course borrow from and are indebted to many sources from around the web.  These source include a number of excellent robotics courses:
 
 
         <!-- TYPEKIT -->
