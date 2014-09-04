@@ -63,31 +63,22 @@
     <div class="content">
 <p>
     <h2>1. Moving Least Squares</h2>
-        <h3>Objective:</h3>
             <p>
-                Objective of this project is to make you understand how a point cloud is being smoothened or sampled to remove the noise that induced by the sensors like lasers, kinect, etc. You will implement MLS algorithm for 2D point cloud and do the below
-                <ul>
-                    <li>Try different descreasing functions</li>
-                    <li>Try different polynomial functions</li>
-                    <li>Try different tricks of sampling initial data</li>
-                </ul>
-            </p>
-            <p>
-                At the end of this project you will know what parameters to use to smoothen a particular data. 
+                The objective of this project is to implement an algorithm to estimate the surface underlying a "point cloud" of 3D points.  This surface estimate allows for noisy points from sensors (e.g., laser rangefinding, depth camera) to be smoothened or downsampled.  For this purpose, you will implement the Moving Least Squares (MLS) algorithm for 2D point clouds, and adjust parameters for kernel weights, choice of polynomial functions, and sampling of surface query points.
             </p>
         <h3>Programming instructions:</h3>
         <p>
-            For this project you are free to use any programming language. It should contain a GUI that can display the 2D points (both input, output). You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in js that has a canvas that can show you the points from the data files. You are welcome to use this stencil code and build up on that. 
+            For this project you are free to use any programming language. It should contain a GUI that can display the 2D points (both input and output), as well as a means to load an input point cloud.  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas that can display points entered into a textbox. We have also provided 3 data files for your testing (input_file1.txt, input_file2.txt, input_file3.txt) that can be copied into the stencil.  You are welcome to use, build upon, and extend this stencil code. 
         </p>
         <h3>Github link to the data and code:</h3>
             <p><a href="">github<a></p>
         <h3>Implementation details:</h3>
         <p>
-            Totally you will implement 3 functions.
+            This project requires implementation of 3 functions:
             <ol>
-                <li>get_rlist(): <p>Given a set of points you should be able to sample them in such a way that you approximate them. There are existing methods to do this which will be covered in the class, as part of presentations. But you are welcome to try your own ways and give the analysis. So this function outputs a list of points which we call rlist.</p></li>
-                <li>get_qHlist(): <p>Given plist (points given as input) and rlist, this function is going to compute the local frame of reference and get the origin corresponding to the local point r in the list. So for each r you will get a q and a H (i.e. local line passing through q). Computing this for all the points in rlist will get you qlist and Hlist as the output of this method.</p></li>
-                <li>get_q_list()<p>Given qlist and Hlist, if you chose a polynomial (computed from optimization routine) will give you a point list which we call q_list would be the smoothened point cloud</p></li>
+                <li>get_rlist(): <p>Given a set of input points P (stored in <tt>plist</tt>), you should be able to generate new samples that will serve as query points for estimating the underlying surface.  The output of this function is a list of sample points R (stored in <tt>rlist</tt>).  There are existing methods to do this sampling, which will be covered in class presentations.  You are welcome to try your own ways and give the analysis. </p></li>
+                <li>get_qHlist(): <p>Given input and sample query points, this function computes the local frame of reference for each sample point, as a point origin (q) and surface normal (H) from this origin. Computing the local reference frame for all the points in <tt>rlist</tt> will produce <tt>qlist</tt> and <tt>Hlist</tt> as the output of this method.  This function will require some form of optimization to estimate each local reference frame.</p></li>
+                <li>get_q_list()<p>Given estimated local reference frames, estimate (through an optimization routine) the parameters for a chosen polynomial of the input points (P) with respect to each reference frame.  Points (Q) taken from these polynomials is the updated resampled point list <tt>q_list</tt>, or MLS smoothened point cloud.</p></li>
             </ol>
         </p>
     <h2>2. RGBD Mapping</h2>
