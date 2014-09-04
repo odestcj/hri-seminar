@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Brown University CSCI2951-P - Human-Robot Interaction Seminar</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+    <!-- Combo with CSSNormalize, CSSGrids-Responsive, CSSForm, CSSTable, CSSList (v3.9.1) -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?3.9.1/build/cssnormalize/cssnormalize-min.css&amp;3.9.1/build/cssgrids-responsive/cssgrids-responsive-min.css&amp;3.9.1/build/cssbutton/cssbutton-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-csslist/gallerycss-csslist-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-csstable/gallerycss-csstable-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-cssform/gallerycss-cssform-min.css">
+    
+    <!-- Some custom styles to make things pretty. -->
+    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/tilomitra/prettypages/gh-pages/ui.css">
+
+    <!-- RainbowJS Syntax Highlighting - Github Theme. 
+         For more themes, go to https://github.com/ccampbell/rainbow/tree/master/themes -->
+    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/ccampbell/rainbow/master/themes/github.css">
+
+    <!-- Modify header colors here to customize the look and feel of the site-->
+    <style>
+        
+        .header {
+            background: rgb(53, 41, 116);
+         }
+            .header h1 {
+                color: white;
+            }
+             .header h2 {
+                 font-weight:300;
+                 margin:0;
+                 color: rgb(116, 130, 230);
+             }
+    </style>
+
+</head>
+
+<body class='yui3-skin-sam'>
+
+    <div id="headerMenu" class="yui3-menu yui3-menu-open yui3-menu-horizontal yui3-menu-fixed">
+        <span class="yui3-menu-heading">BrownCSCI2951-P</span>
+        <ul>
+            <li class="yui3-menu-active"><a href="index.html">home</a></li>
+            <li><a href="http://github.com/BrownCSCSCI2951-P/">github</a></li>
+            <li><a href="prelim_projects.html">Prelim Projects</a></li>
+            <!--
+            <li><a href="#assignment1">Project 1</a></li>
+            <li><a href="#assignment2">Project 2</a></li>
+            <li><a href="#assignment3">Project 3</a></li>
+            <li><a href="#assignment4">Project 4</a></li>
+            <li><a href="#assignment5">Final Project</a></li>
+            -->
+        </ul>
+    </div>
+    <div class="header yui3-u-1">
+
+        <h1 class="yui3-u-1">Brown CSCI2951-P</h1>
+        <h2 class="yui3-u">Human-Robot Interaction Seminar</h2>
+        <br>
+        <h2 class="yui3-u">Fall 2014</h2>
+        <p>
+        <h2 class="yui3-u">Prelim Projects</h2>
+
+     </div>
+    <div class="content">
+<p>
+    <h2>1. Moving Least Squares</h2>
+        <h3>Objective:</h3>
+            <p>
+                Objective of this project is to make you understand how a point cloud is being smoothened or sampled to remove the noise that induced by the sensors like lasers, kinect, etc. You will implement MLS algorithm for 2D point cloud and do the below
+                <ul>
+                    <li>Try different descreasing functions</li>
+                    <li>Try different polynomial functions</li>
+                    <li>Try different tricks of sampling initial data</li>
+                </ul>
+            </p>
+            <p>
+                At the end of this project you will know what parameters to use to smoothen a particular data. 
+            </p>
+        <h3>Programming instructions:</h3>
+        <p>
+            For this project you are free to use any programming language. It should contain a GUI that can display the 2D points (both input, output). You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in js that has a canvas that can show you the points from the data files. You are welcome to use this stencil code and build up on that. 
+        </p>
+        <h3>Github link to the data and code:</h3>
+            <p><a href="">github<a></p>
+        <h3>Implementation details:</h3>
+        <p>
+            Totally you will implement 3 functions.
+            <ol>
+                <li>get_rlist(): <p>Given a set of points you should be able to sample them in such a way that you approximate them. There are existing methods to do this which will be covered in the class, as part of presentations. But you are welcome to try your own ways and give the analysis. So this function outputs a list of points which we call rlist.</p></li>
+                <li>get_qHlist(): <p>Given plist (points given as input) and rlist, this function is going to compute the local frame of reference and get the origin corresponding to the local point r in the list. So for each r you will get a q and a H (i.e. local line passing through q). Computing this for all the points in rlist will get you qlist and Hlist as the output of this method.</p></li>
+                <li>get_q_list()<p>Given qlist and Hlist, if you chose a polynomial (computed from optimization routine) will give you a point list which we call q_list would be the smoothened point cloud</p></li>
+            </ol>
+        </p>
+    <h2>2. RGBD Mapping</h2>
+        <h3>Objective:</h3>
+            <p>
+                Objective of this project is to make you get acquainted with 3D point cloud data, and place a sequence of point cloud frames using transformations from the robots odometry to build a RGBD map. At the end of this project you will know what are the issues with mapping techniques and what are the open research problems in this areas.
+            </p>
+                
+        <h3>Programming instructions:</h3>
+        <p>
+            For this project you are supposed to use PCL a C++ library for processing point cloud data. You will be introduced to the data and the processing methods in a lab sessions. You will also have to show the results in the PCL visualizer which has the properties to place the point clouds spacially at the specified locations in 3D using transforms.
+        </p>
+        <h3>Github link to the data and code:</h3>
+            <p>TBD</p>
+
+        <h3>Implementation details:</h3>
+        <p>
+            Totally you will implement 3 functions.
+            <ol>
+                <li>read_pcd_odom(): <p>You will be given a sequence of point cloud data (pcd files) along with the odomotry readings from the robot in a file. You will have to read the files and store them in a specific datastructure.</p></li>
+                <li>compute_trasforms(): <p>This method will be the core of the project where you will compute transformations of the cloud viewpoints with respect to the odometry readings. Transformations will be covered in the class as a refresher.</p></li>
+                <li>show_map()<p>As you compute the transforms of the cloud corresponding to the odometry, you will have to place these clouds in a visualizer along with the computed transforms.</p></li>
+            </ol>
+        </p>
+
+    <h2>3. SGD SLAM</h2>
+        <h3>Objective:</h3>
+        <p></p>
+        <h3>Programming instructions:</h3>
+        <p></p>
+        <h3>Github link to the data and code:</h3>
+            <p>TBD</p>
+        <h3>Implementation details:</h3>
+        <p></p>
+
+            <!-- TYPEKIT -->
+        <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="https://rawgithub.com/ccampbell/rainbow/master/js/rainbow.min.js"></script>
+        <script src="https://rawgithub.com/ccampbell/rainbow/master/js/language/generic.js"></script>
+    </div>
+</body>
+</html>
