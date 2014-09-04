@@ -62,7 +62,7 @@
      </div>
     <div class="content">
 <p>
-    <h2>1. Moving Least Squares</h2>
+    <h2>Project 1: Moving Least Squares</h2>
             <p>
                 The objective of this project is to implement an algorithm to estimate the surface underlying a "point cloud" of 3D points.  This surface estimate allows for noisy points from sensors (e.g., laser rangefinding, depth camera) to be smoothened or downsampled.  For this purpose, you will implement the Moving Least Squares (MLS) algorithm for 2D point clouds, and adjust parameters for kernel weights, choice of polynomial functions, and sampling of surface query points.
             </p>
@@ -81,15 +81,15 @@
                 <li>get_q_list()<p>Given estimated local reference frames, estimate (through an optimization routine) the parameters for a chosen polynomial of the input points (P) with respect to each reference frame.  Points (Q) taken from these polynomials is the updated resampled point list <tt>q_list</tt>, or MLS smoothened point cloud.</p></li>
             </ol>
         </p>
-    <h2>2. RGBD Mapping</h2>
+    <h2>Project 2: Mapping by Odometry</h2>
         <h3>Objective:</h3>
             <p>
-                Objective of this project is to make you get acquainted with 3D point cloud data, and place a sequence of point cloud frames using transformations from the robots odometry to build a RGBD map. At the end of this project you will know what are the issues with mapping techniques and what are the open research problems in this areas.
+                The objective of this project is to build a simple 3D RGBD mapping system using odometry.  You become acquainted with 3D point cloud data and 3D geometric transforms.  These concepts will allow building a 3D map from a synchronized sequence of point cloud frames and robot odometry.  The implementation of this project will serve as the baseline for concepts in the course as well as the eventual mapping system you will produce this semester.
             </p>
                 
         <h3>Programming instructions:</h3>
         <p>
-            For this project you are supposed to use PCL a C++ library for processing point cloud data. You will be introduced to the data and the processing methods in a lab sessions. You will also have to show the results in the PCL visualizer which has the properties to place the point clouds spacially at the specified locations in 3D using transforms.
+            For this project, you will implement a mapping system that reads in a sequence of point cloud files and an odometry text file and outputs the resulting map to an interactive 3D display.  The input point cloud files will be in the <a href="http://pointclouds.org/documentation/tutorials/pcd_file_format.php">Point Cloud Data (PCD)</a>.  The odometry text file will have a list 6 degree-of-freedom poses for the pose of the robot's camera (in the odometric frame) at each instance of the sequence.  This project requires implementation of an interactive GUI that can display 3D points and change viewpoints in real time.  Any programming language can be used for this assignment.  We recommend using the Point Cloud Library, a C++ library for processing point cloud data, to import PCD files and interactive visualization of the resulting map. You will be introduced to the data and the processing methods in a lab sessions. You will also have to show the results in the PCL visualizer which has the properties to place the point clouds spacially at the specified locations in 3D using transforms.
         </p>
         <h3>Github link to the data and code:</h3>
             <p>TBD</p>
@@ -98,9 +98,9 @@
         <p>
             Totally you will implement 3 functions.
             <ol>
-                <li>read_pcd_odom(): <p>You will be given a sequence of point cloud data (pcd files) along with the odomotry readings from the robot in a file. You will have to read the files and store them in a specific datastructure.</p></li>
-                <li>compute_trasforms(): <p>This method will be the core of the project where you will compute transformations of the cloud viewpoints with respect to the odometry readings. Transformations will be covered in the class as a refresher.</p></li>
-                <li>show_map()<p>As you compute the transforms of the cloud corresponding to the odometry, you will have to place these clouds in a visualizer along with the computed transforms.</p></li>
+                <li>read_pcd_odom(): <p>Given a sequence of point cloud data (pcd files) and odomotry file, read these files and store them into a data structure.</p></li>
+                <li>compute_trasforms(): <p>Build the 3D map from the imported point clouds and odometry.  This function will involve computing the 3D matrix transform for each odometric pose and transforming its associated point cloud points into the frame of this pose.</p></li>
+                <li>show_map()<p>Display the overall point cloud from the constructed map in the interactive 3D GUI.  This function should be sure to display the color of each point as well as its location in space.</p></li>
             </ol>
         </p>
 
