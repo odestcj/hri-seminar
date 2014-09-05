@@ -68,7 +68,7 @@
             </p>
         <h3>Programming instructions:</h3>
         <p>
-            For this project you are free to use any programming language. It should contain a GUI that can display the 2D points (both input and output), as well as a means to load an input point cloud.  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas that can display points entered into a textbox. We have also provided 3 data files for your testing (input_file1.txt, input_file2.txt, input_file3.txt) that can be copied into the stencil.  You are welcome to use, build upon, and extend this stencil code. 
+            For this project, you are free to use any programming language. It should contain a GUI that can display the 2D points (both input and output), as well as a means to load an input point cloud.  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas that can display points entered into a textbox. We have also provided 3 data files for your testing (input_file1.txt, input_file2.txt, input_file3.txt) that can be copied into the stencil.  You are welcome to use, build upon, and extend this stencil code. 
         </p>
         <h3>Github link to the data and code:</h3>
             <p><a href="">github<a></p>
@@ -82,7 +82,6 @@
             </ol>
         </p>
     <h2>Project 2: Mapping by Odometry</h2>
-        <h3>Objective:</h3>
             <p>
                 The objective of this project is to build a simple 3D RGBD mapping system using odometry.  You become acquainted with 3D point cloud data and 3D geometric transforms.  These concepts will allow building a 3D map from a synchronized sequence of point cloud frames and robot odometry.  The implementation of this project will serve as the baseline for concepts in the course as well as the eventual mapping system you will produce this semester.
             </p>
@@ -104,15 +103,18 @@
             </ol>
         </p>
 
-    <h2>3. SGD SLAM</h2>
+    <h2>Project 3: SGD SLAM</h2>
+        <img src="sgd-slam-example.png" width=500 style="border:5px solid black">
         <h3>Objective:</h3>
-        <p></p>
+        <p>The objective of this project is to implement a Simultaneous Localization and Mapping algorithm for estimating a robot's true trajectory from noisy odometry.  The Stochastic Gradient Descent algorithm will be used to perform SLAM as an optimization of the robot's pose graph to match poses that form a loop closure.  The input into this algorithm is a sequence of N robot poses and loop closures expressed as constraints between two poses.  The output will be the corrected N pose sequence, where each iteration of the displayed through some user interface. </p>
         <h3>Programming instructions:</h3>
-        <p></p>
+        <p>
+            For this project, you are free to use any programming language. It should contain an interface that can display three 2D pose graphs (for ground truth, input, and output).  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data objects and basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas with hardcoded data objects.  You are welcome to use, build upon, and extend this stencil code. 
+</p>
         <h3>Github link to the data and code:</h3>
             <p>TBD</p>
         <h3>Implementation details:</h3>
-        <p></p>
+        <p> This project requires implementation of Algorithm 1 from "Fast Iterative Alignment of Pose Graphs with Poor Initial Estimates" by Olson et al.  Implementation of this algorithm requires matrix multiplication, 2D matrix transform, and matrix inversion routines.  Matrix inversion will only be provided for the JavaScript stencil, using <a href="http://numericjs.com/">numericjs</a>.</p>
 
             <!-- TYPEKIT -->
         <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
