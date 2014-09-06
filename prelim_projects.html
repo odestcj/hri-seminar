@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Brown University CSCI2951-P - Human-Robot Interaction Seminar</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+    <!-- Combo with CSSNormalize, CSSGrids-Responsive, CSSForm, CSSTable, CSSList (v3.9.1) -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?3.9.1/build/cssnormalize/cssnormalize-min.css&amp;3.9.1/build/cssgrids-responsive/cssgrids-responsive-min.css&amp;3.9.1/build/cssbutton/cssbutton-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-csslist/gallerycss-csslist-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-csstable/gallerycss-csstable-min.css&amp;gallery-2013.03.27-22-06/build/gallerycss-cssform/gallerycss-cssform-min.css">
+    
+    <!-- Some custom styles to make things pretty. -->
+    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/tilomitra/prettypages/gh-pages/ui.css">
+
+    <!-- RainbowJS Syntax Highlighting - Github Theme. 
+         For more themes, go to https://github.com/ccampbell/rainbow/tree/master/themes -->
+    <link rel="stylesheet" type="text/css" href="https://rawgithub.com/ccampbell/rainbow/master/themes/github.css">
+
+    <!-- Modify header colors here to customize the look and feel of the site-->
+    <style>
+        
+        .header {
+            background: rgb(53, 41, 116);
+         }
+            .header h1 {
+                color: white;
+            }
+             .header h2 {
+                 font-weight:300;
+                 margin:0;
+                 color: rgb(116, 130, 230);
+             }
+    </style>
+
+</head>
+
+<body class='yui3-skin-sam'>
+
+    <div id="headerMenu" class="yui3-menu yui3-menu-open yui3-menu-horizontal yui3-menu-fixed">
+        <span class="yui3-menu-heading">BrownCSCI2951-P</span>
+        <ul>
+            <li class="yui3-menu-active"><a href="index.html">home</a></li>
+            <li><a href="http://github.com/BrownCSCSCI2951-P/">github</a></li>
+            <li><a href="prelim_projects.html">Prelim Projects</a></li>
+            <!--
+            <li><a href="#assignment1">Project 1</a></li>
+            <li><a href="#assignment2">Project 2</a></li>
+            <li><a href="#assignment3">Project 3</a></li>
+            <li><a href="#assignment4">Project 4</a></li>
+            <li><a href="#assignment5">Final Project</a></li>
+            -->
+        </ul>
+    </div>
+    <div class="header yui3-u-1">
+
+        <h1 class="yui3-u-1">Brown CSCI2951-P</h1>
+        <h2 class="yui3-u">Human-Robot Interaction Seminar</h2>
+        <br>
+        <h2 class="yui3-u">Fall 2014</h2>
+        <p>
+        <h2 class="yui3-u">Prelim Projects</h2>
+
+     </div>
+    <div class="content">
+<p>
+    <h2>Project 1: Moving Least Squares</h2>
+            <p>
+                The objective of this project is to implement an algorithm to estimate the surface underlying a "point cloud" of 3D points.  This surface estimate allows for noisy points from sensors (e.g., laser rangefinding, depth camera) to be smoothened or downsampled.  For this purpose, you will implement the Moving Least Squares (MLS) algorithm for 2D point clouds, and adjust parameters for kernel weights, choice of polynomial functions, and sampling of surface query points.
+            </p>
+        <h3>Programming instructions:</h3>
+        <p>
+            For this project, you are free to use any programming language. It should contain a GUI that can display the 2D points (both input and output), as well as a means to load an input point cloud.  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data files and also a basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas that can display points entered into a textbox. We have also provided 3 data files for your testing (input_file1.txt, input_file2.txt, input_file3.txt) that can be copied into the stencil.  You are welcome to use, build upon, and extend this stencil code. 
+        </p>
+        <h3>Github link to the data and code inside the "mls" directory:</h3>
+            <p><a href="https://github.com/odestcj/hri-seminar">github<a></p>
+        <h3>Implementation details:</h3>
+        <p>
+            This project requires implementation of 3 functions:
+            <ol>
+                <li>get_rlist(): <p>Given a set of input points P (stored in <tt>plist</tt>), you should be able to generate new samples that will serve as query points for estimating the underlying surface.  The output of this function is a list of sample points R (stored in <tt>rlist</tt>).  There are existing methods to do this sampling, which will be covered in class presentations.  You are welcome to try your own ways and give the analysis. </p></li>
+                <li>get_qHlist(): <p>Given input and sample query points, this function computes the local frame of reference for each sample point, as a point origin (q) and surface normal (H) from this origin. Computing the local reference frame for all the points in <tt>rlist</tt> will produce <tt>qlist</tt> and <tt>Hlist</tt> as the output of this method.  This function will require some form of optimization to estimate each local reference frame.</p></li>
+                <li>get_q_list()<p>Given estimated local reference frames, estimate (through an optimization routine) the parameters for a chosen polynomial of the input points (P) with respect to each reference frame.  Points (Q) taken from these polynomials is the updated resampled point list <tt>q_list</tt>, or MLS smoothened point cloud.</p></li>
+            </ol>
+        </p>
+    <h2>Project 2: Mapping by Odometry</h2>
+            <p>
+                The objective of this project is to build a simple 3D RGBD mapping system using odometry.  You become acquainted with 3D point cloud data and 3D geometric transforms.  These concepts will allow building a 3D map from a synchronized sequence of point cloud frames and robot odometry.  The implementation of this project will serve as the baseline for concepts in the course as well as the eventual mapping system you will produce this semester.
+            </p>
+                
+        <h3>Programming instructions:</h3>
+        <p>
+            For this project, you will implement a mapping system that reads in a sequence of point cloud files and an odometry text file and outputs the resulting map to an interactive 3D display.  The input point cloud files will be in the <a href="http://pointclouds.org/documentation/tutorials/pcd_file_format.php">Point Cloud Data (PCD)</a>.  The odometry text file will have a list 6 degree-of-freedom poses for the pose of the robot's camera (in the odometric frame) at each instance of the sequence.  This project requires implementation of an interactive GUI that can display 3D points and change viewpoints in real time.  Any programming language can be used for this assignment.  We recommend using the Point Cloud Library, a C++ library for processing point cloud data, to import PCD files and interactive visualization of the resulting map. You will be introduced to the data and the processing methods in a lab sessions. You will also have to show the results in the PCL visualizer which has the properties to place the point clouds spacially at the specified locations in 3D using transforms.
+        </p>
+        <h3>Github link to the data and code:</h3>
+            <p>TBD</p>
+
+        <h3>Implementation details:</h3>
+        <p>
+            Totally you will implement 3 functions.
+            <ol>
+                <li>read_pcd_odom(): <p>Given a sequence of point cloud data (pcd files) and odomotry file, read these files and store them into a data structure.</p></li>
+                <li>compute_trasforms(): <p>Build the 3D map from the imported point clouds and odometry.  This function will involve computing the 3D matrix transform for each odometric pose and transforming its associated point cloud points into the frame of this pose.</p></li>
+                <li>show_map()<p>Display the overall point cloud from the constructed map in the interactive 3D GUI.  This function should be sure to display the color of each point as well as its location in space.</p></li>
+            </ol>
+        </p>
+
+    <h2>Project 3: SGD SLAM</h2>
+        <img src="sgd-slam-example.png" width=500 style="border:5px solid black">
+        <h3>Objective:</h3>
+        <p>The objective of this project is to implement a Simultaneous Localization and Mapping algorithm for estimating a robot's true trajectory from noisy odometry.  The Stochastic Gradient Descent algorithm will be used to perform SLAM as an optimization of the robot's pose graph to match poses that form a loop closure.  The input into this algorithm is a sequence of N robot poses and loop closures expressed as constraints between two poses.  The output will be the corrected N pose sequence, where each iteration of the displayed through some user interface. </p>
+        <h3>Programming instructions:</h3>
+        <p>
+            For this project, you are free to use any programming language. It should contain an interface that can display three 2D pose graphs (for ground truth, input, and output).  You are welcome to use libraries like OpenCV, Qt, Java, C++ or any language for this purpose. We will provide you with git-repo that has the input data objects and basic stencil code in JavaScript.  The provided JavaScript stencil has a canvas with hardcoded data objects.  You are welcome to use, build upon, and extend this stencil code. 
+</p>
+        <h3>Github link to the data and code in the "sgd" directory:</h3>
+            <p>https://github.com/odestcj/hri-seminar</p>
+        <h3>Implementation details:</h3>
+        <p> This project requires implementation of the SGD optimization in Algorithm 1 from "Fast Iterative Alignment of Pose Graphs with Poor Initial Estimates" by Olson et al.  For the JavaScript stencil, this implementation should be placed in the sgd_update() function.  Implementation of this algorithm requires matrix multiplication, 2D matrix transform, and matrix inversion routines.  For the JavaScript stencil, matrix inversion is provided by using <a href="http://numericjs.com/">numericjs</a>.</p>
+
+            <!-- TYPEKIT -->
+        <script type="text/javascript" src="//use.typekit.net/ajf8ggy.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="https://rawgithub.com/ccampbell/rainbow/master/js/rainbow.min.js"></script>
+        <script src="https://rawgithub.com/ccampbell/rainbow/master/js/language/generic.js"></script>
+    </div>
+</body>
+</html>
